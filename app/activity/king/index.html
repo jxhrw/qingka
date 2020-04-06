@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="screen-orientation" content="portrait">
+    <meta name="x5-orientation" content="portrait">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>段子王者</title>
+    <link rel="stylesheet" href="../../../res/css/common.css" />
+    <link rel="stylesheet" href="../../../res/css/prompt.css" />
+    <link rel="stylesheet" href="../../../res/css/swiper-4.2.2.min.css" />
+    <link rel="stylesheet" href="main.css" />
+    <!-- <link rel="stylesheet" href="//at.alicdn.com/t/font_850244_bpz8dltblc.css" data-concat="false" /> -->
+</head>
+
+<body style="background: #000000">
+    <!--<input type="file" style="opacity: 1">-->
+    <div class="btn_rule" onclick="showModal('.modal_rule')"></div>
+
+    <div id="page">
+        <div class="relative">
+            <img src="./imgs/bg-header.png" alt="">
+            <img class="position1" src="./imgs/icon-rule.png" alt="" @click="vshow=true">
+            <div class="p1-txt fontsize20">
+                <p>段子王者之位空悬，江湖中风云再起......</p>
+                <p>即右响应武林呼声，特此昭告天下，选拔<i>段子王者</i>，执掌武林！</p>
+                <p>
+                    每周一<span>，张榜</span>公布赛题<span>，两种题型共6道题目
+                        <br>
+                        参赛者自由选题，录制并发布含音频的短音频，带上话题</span>#段子王者#<span>#题目标题#参赛</span>
+                    <br>
+                    周六至周日<span>，榜单前十名用户优秀作品</span>开放踢馆赛<span>，各位好汉不服就战！活动持续四周，根据“段子王者”缎带获得数量，最终入榜者将笑傲武林，坐拥王者宝藏！来吧，大开你的脑洞，让我们一决高下！
+                    </span>
+                </p>
+            </div>
+            <div class="position2" v-show="vshow">
+                <div class="btn-arrow" @click="vshow=false"></div>
+                <img class="position" :src="'./imgs/img-goodplay.png'" alt="">
+                <ul class="p2-ul fontsize18">
+                    <li class="text_ellipsis">xxx人正在参与</li>
+                    <li class="text_ellipsis">敬请期待</li>
+                    <li class="text_ellipsis">xxx人正在参与</li>
+                    <li class="text_ellipsis">xxx人正在参与</li>
+                </ul>
+            </div>
+        </div>
+        <div class="i-title">
+            <div class="btn-title tt1 active"></div>
+            <div class="btn-title tt2"></div>
+        </div>
+        <div class="tab-ph">
+            <div class="qs-for-week relative">
+                <img src="./imgs/bg-questions.png" alt="">
+                <img class="m-work" src="./imgs/icon-mywork.png" alt="">
+                <div class="qs-box">
+                    <h3 class="fontsize36">表情题（一）</h3>
+                    <p class="fontsize24">将下列表情组装成一个小故事</p>
+                    <div class="swiper-father">
+                        <div class="swiper-container" id="weeksQs">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">slider1</div>
+                                <div class="swiper-slide">slider2</div>
+                                <div class="swiper-slide">slider3</div>
+                            </div>
+                        </div>
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+                    </div>
+                    <div class="btn-handin"></div>
+                    <span class="fontsize24">热门作品合集 <i class="fontsize18">》</i></span>
+                </div>
+                <div class="qs-btn fontsize24 color_999">点击查看更多往周赛题</div>
+            </div>
+            <div class="m-ribbon relative">
+                <img src="./imgs/bg-king.png" alt="">
+                <img class="lightning" src="./imgs/icon-light.png" alt="">
+                <img class="k-num" src="./imgs/img-10.png" alt="">
+                <div class="rb-box rb1">
+                    <div class="rb-line-box blue">
+                        <div class="rb-line" :style="{'width': '80%','background-image':'url(./imgs/img-10.png)'}">
+                        </div>
+                    </div>
+                    <img class="num" :src="'./imgs/img-'+10+'.png'"></img>
+                    <p class="fontsize16">当前还差1条即可自动合成</p>
+                </div>
+                <div class="rb-box rb2">
+                    <div class="rb-line-box yellow">
+                        <div class="rb-line" :style="{'width': '80%','background-image':'url(./imgs/img-10.png)'}">
+                        </div>
+                    </div>
+                    <img class="num" :src="'./imgs/img-'+10+'.png'"></img>
+                    <p class="fontsize16">当前还差1条即可自动合成</p>
+                </div>
+                <div class="rb-box rb3">
+                    <div class="rb-line-box pink">
+                        <div class="rb-line" :style="{'width': '80%','background-image':'url(./imgs/img-10.png)'}">
+                        </div>
+                    </div>
+                    <img class="num" :src="'./imgs/img-'+10+'.png'"></img>
+                    <p class="fontsize16">当前还差4个鼓励值即可自动合成</p>
+                </div>
+            </div>
+            <div class="relative">
+                <img src="./imgs/bg-footer.png" alt="">
+            </div>
+        </div>
+
+    </div>
+
+    <div id="prompt">
+        <div class="prompt_container">
+            <i class="icon-guanbi iconfont close" onclick="closeModal('#prompt')"></i>
+            <p class="prompt_title scaleY"></p>
+            <div class="prompt_body">
+
+            </div>
+            <div class="btn_prompt scaleY">
+                <span class="btn_prompt1 scaleX" onclick="closeModal('#prompt')">取消</span>
+                <span class="btn_prompt2"></span>
+            </div>
+            <div class="btn2_prompt">
+                <button class="btn_prompt3 background_gradient"></button>
+            </div>
+        </div>
+    </div>
+    <div id="alert" onclick="hideAlert()">
+        <div class="alert_content">
+
+        </div>
+    </div>
+
+
+    <script src="../../../res/js/rem.js"></script>
+    <script src="../../../config/config.js"></script>
+    <script src="../../../res/js/jquery-2.1.4.min.js"></script>
+    <script src="../../../res/js/swiper-4.2.2.min.js"></script>
+    <script src="../../../res/js/vue.min.js"></script>
+    <script src="../../../res/js/base64.js"></script>
+    <script src="../../../res/js/common.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>

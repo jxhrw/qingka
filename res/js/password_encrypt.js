@@ -1,0 +1,1 @@
+function encryptpsd(a){var b,c,d;return a=CryptoJS.MD5(a).toString(CryptoJS.enc.Hex),b=Math.random().toString(36).substr(2),c=b[0],d=b[b.length-1],a=a.substr(0,1)+c+a.substr(2,a.length),a=a.substr(0,a.length-2)+d+a.substr(a.length-1,1)}
