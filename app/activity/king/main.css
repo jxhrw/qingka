@@ -3,6 +3,18 @@ img {
     width: 100%;
 }
 
+.fontsize16 {
+    font-size: 0.533rem;
+}
+
+.fontsize18 {
+    font-size: 0.6rem;
+}
+
+.fontsize22 {
+    font-size: 0.733rem;
+}
+
 .relative {
     left: 0;
     right: 0;
@@ -252,7 +264,9 @@ img {
 .m-ribbon .rb-line-box .rb-line {
     height: 100%;
     border-radius: 1rem;
-    background: url() no-repeat center/1.6rem;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 1.6rem;
 }
 
 .m-ribbon .rb-line-box.blue {
@@ -289,20 +303,124 @@ img {
 .m-ribbon .rb-box.rb1 p {
     color: #6CB1FD;
     position: absolute;
-    bottom: 0.3rem;
+    bottom: 0.9rem;
     left: 6.3rem;
 }
 
 .m-ribbon .rb-box.rb2 p {
     color: #FFE376;
     position: absolute;
-    bottom: 0.3rem;
+    bottom: 0.9rem;
     left: 6.3rem;
 }
 
 .m-ribbon .rb-box.rb3 p {
     color: #FDC9E5;
     position: absolute;
-    bottom: 0.3rem;
+    bottom: 0.65rem;
     left: 12.6rem;
+}
+
+.m-prop {
+    position: absolute;
+    top: 6.3rem;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 0 2.2rem 0 2.267rem;
+}
+
+.m-prop .exp {
+    position: absolute;
+    top: -1.6rem;
+    right: 1.9rem;
+    width: 1.133rem;
+    height: 1.133rem;
+    background: url('./imgs/icon-explain.png') no-repeat center/100% 100%;
+}
+
+.m-prop .m-tips {
+    position: absolute;
+    top: 1.667rem;
+    right: 0;
+    width: 1.7rem;
+    height: 6.6rem;
+    background: url('./imgs/icon-tips-lr.png') no-repeat center/100% 100%;
+}
+
+.m-prop .mp-scroll-box {
+    height: 11.433rem;
+    width: 100%;
+    overflow: hidden;
+}
+
+.m-prop .mp-ul {
+    display: block;
+    width: 100%;
+    height: 110%;
+    white-space: nowrap;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    vertical-align: top;
+    word-spacing: -1rem;
+}
+
+.m-prop .mp-ul li {
+    width: 6.533rem;
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+}
+
+.m-prop .mp-ul li+li {
+    margin-left: 0.467rem;
+}
+
+.m-prop .mp-ul li p {
+    line-height: 0.567rem;
+    color: #565C7A;
+    white-space: normal;
+    text-align: center;
+    margin-top: 0.433rem;
+}
+
+.m-prop .mp-ul li i {
+    display: block;
+    position: absolute;
+    width: 3.367rem;
+    height: 1.3rem;
+    background: url('./imgs/icon-point.png') no-repeat center/100% 100%;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 7.1rem;
+}
+
+.m-prop .mp-ul li a {
+    display: block;
+    position: absolute;
+    color: rgba(255, 216, 107, 0.5);
+    margin: auto;
+    text-align: center;
+    left: 0;
+    right: 0;
+    top: 7.1rem;
+}
+
+.m-prop .mp-btn {
+    width: 13.1rem;
+    height: 2.967rem;
+    background: url('./imgs/icon-invite.png') no-repeat center/100% 100%;
+    margin: auto;
+}
+
+.m-prop .mp-p {
+    color: #565C7A;
+    text-align: center;
+    margin-top: 0.6rem;
+}
+
+.m-prop .mp-a {
+    color: #FFD86B;
+    text-align: center;
+    margin-top: 0.533rem;
 }
