@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" style="visibility: hidden;">
 
 <head>
     <meta charset="UTF-8">
@@ -12,6 +12,7 @@
     <meta name="x5-orientation" content="portrait">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>段子王者</title>
+    <script src="../../../res/js/rem.js"></script>
     <link rel="stylesheet" href="../../../res/css/common.css" />
     <link rel="stylesheet" href="../../../res/css/prompt.css" />
     <link rel="stylesheet" href="../../../res/css/swiper-4.2.2.min.css" />
@@ -19,7 +20,7 @@
     <!-- <link rel="stylesheet" href="//at.alicdn.com/t/font_850244_bpz8dltblc.css" data-concat="false" /> -->
 </head>
 
-<body style="background: #000000">
+<body style="background: #000000;">
     <!--<input type="file" style="opacity: 1">-->
     <div class="btn_rule" onclick="showModal('.modal_rule')"></div>
 
@@ -29,8 +30,8 @@
             <img class="position1" src="./imgs/icon-rule.png" alt="" @click="vshow=true">
             <div class="p1-txt fontsize20">
                 <p>段子王者之位空悬，江湖中风云再起......</p>
-                <p>即右响应武林呼声，特此昭告天下，选拔<i>段子王者</i>，执掌武林！</p>
-                <p>
+                <p style="margin-top:0.3rem;">即右响应武林呼声，特此昭告天下，选拔<i>段子王者</i>，执掌武林！</p>
+                <p style="margin-top:0.6rem;">
                     每周一<span>，张榜</span>公布赛题<span>，两种题型共6道题目
                         <br>
                         参赛者自由选题，录制并发布含音频的短音频，带上话题</span>#段子王者#<span>#题目标题#参赛</span>
@@ -109,7 +110,7 @@
             <div class="m-prop-test relative">
                 <img src="./imgs/bg-footer.png" alt="">
                 <div class="m-prop">
-                    <i class="exp"></i>
+                    <i class="exp" onclick="showModal('#propExp')"></i>
                     <i class="m-tips"></i>
                     <div class="mp-scroll-box">
                         <ul class="mp-ul">
@@ -121,7 +122,7 @@
                             <li>
                                 <img src="./imgs/img-card1.png" alt="">
                                 <p class="fontsize16">2020/03/01好友[用户昵称]应邀注册</p>
-                                <i></i>
+                                <i onclick="showModal('#pointRib')"></i>
                             </li>
                             <li>
                                 <img src="./imgs/img-card1.png" alt="">
@@ -135,11 +136,46 @@
                             </li>
                         </ul>
                     </div>
+                    <!-- <div class="mp-scroll-box flex_row">
+                        <div class="no-content fontsize24">
+                            <p class="nc-p1">你还没有获得任何道具呢</p>
+                            <p class="nc-p2">参与周榜冲榜、邀请好友注册、参与踢馆赛、 <br>玩脑洞测试，都有机会获得冲刺卡哦！</p>
+                        </div>
+                    </div> -->
                     <div class="mp-btn"></div>
                     <p class="mp-p fontsize18">邀请好友注册，可获得友情冲刺卡一张</p>
                     <p class="mp-a fontsize22"><a>应援记录</a></p>
                 </div>
                 <div class="m-test"></div>
+            </div>
+
+
+            <div class="modal" id="propExp">
+                <div class="modal-content-exp relative">
+                    <img src="./imgs/icon-close.png" class="icon-close" onclick="closeModal('#propExp')" alt="">
+                    <img src="./imgs/icon-title-md.png" class="md-title" alt="">
+                    <div class="md-div">
+                        <ol class="fontsize22">
+                            <li>用户邀请好友应援，好友注册后，用户将获得 一张“友情冲刺卡”；</li>
+                            <li>用户在周榜结算时，获得周榜排名前十，将获得一张“实力冲刺卡”；</li>
+                            <li>用户玩脑洞测试题，并完成分享任务后，将获得一张“脑洞测试卡”；</li>
+                            <li>参与周榜中的每周六、周日踢馆比赛，获胜可获得"踢馆冲刺卡“一张。</li>
+                        </ol>
+                    </div>
+                    <p class="md-p fontsize20">*以上四种冲刺卡都可以被点化为三种缎带中的一种哦~</p>
+                </div>
+            </div>
+            <div class="modal" id="pointRib">
+                <div class="modal-content-rib">
+                    <div class="light-box relative">
+                        <img class="Rotation" src="./imgs/icon-lighting.png" alt="">
+                        <h6>恭喜你</h6>
+                        <p>成功点化出"人间段子手"缎带</p>
+                        <img class="rb" src="./imgs/icon-ribbon2.png" alt="">
+                    </div>
+                    <img id="closeRib" class="md-btn" src="./imgs/icon-receive.png" onclick="closeModal('#pointRib')"
+                        alt="">
+                </div>
             </div>
         </div>
 
@@ -167,8 +203,7 @@
         </div>
     </div>
 
-
-    <script src="../../../res/js/rem.js"></script>
+    <!-- <script src="../../../res/js/rem.js"></script> -->
     <script src="../../../config/config.js"></script>
     <script src="../../../res/js/jquery-2.1.4.min.js"></script>
     <script src="../../../res/js/swiper-4.2.2.min.js"></script>

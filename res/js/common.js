@@ -138,13 +138,13 @@ function login(auth_id, func) {
     }
     // alert('auth_id--' + auth_id + '---acc_token---' + acc_token + '--openId--' + openId)
     var params = {
-        auth_id: openId ? null:auth_id,
+        auth_id: openId ? null : auth_id,
         version: version,
         src: src,
         type: type, //20-微信  21-微博  22-QQ     
         open_id: openId,
         // refresh_token: openId ? null:acc_token ,
-        refresh_token:acc_token ,
+        refresh_token: acc_token,
         redirect_url: now_url,
         invite_uid: invite_uid,
         id: liveId,
@@ -189,7 +189,7 @@ function login(auth_id, func) {
 function getAuthId() {
     if (ua.match(/MicroMessenger/i) == "micromessenger") { //微信
         window.location.href = get_code_url
-    } else if(ua.match(/QQ/i) == "qq" || ua.match(/WeiBo/i) == "weibo"){
+    } else if (ua.match(/QQ/i) == "qq" || ua.match(/WeiBo/i) == "weibo") {
         var _hrefReturn = window.location.href.replace(/code/g, "coded")
         _hrefReturn.replace(/access_token/g, "access_tokened")
         localStorage.setItem('loginReturnPage', _hrefReturn);
@@ -222,7 +222,7 @@ function checkLogin(type) {
         getAuthId()
         return false
     }
-    if(!localStorage.getItem('openId') || localStorage.getItem('openId') == 'undefined'){
+    if (!localStorage.getItem('openId') || localStorage.getItem('openId') == 'undefined') {
         getAuthId()
         return false
     } else {

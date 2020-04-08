@@ -1,7 +1,7 @@
 var pageData = new Vue({
     el: '#page',
     data: {
-        vshow: false
+        vshow: false,
     },
     methods: {
         changeAudioUrl: function (audioUrl, index) {
@@ -145,8 +145,9 @@ function checkType(url) {
     return false;
 }
 
-
+$('body').css('visibility', 'visible');
 $(function () {
+    scrollTop = 0;
     var mySwiper = new Swiper('#weeksQs', {
         autoplay: true, //可选选项，自动滑动
         loop: true,
