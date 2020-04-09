@@ -42,7 +42,7 @@ html.over {
     top: 30rem;
     left: 0;
     text-align: justify;
-    padding-top: 2.367rem;
+    /* padding-top: 2.367rem; */
     background: url('./imgs/icon-arrow.png') no-repeat center top/1.3rem;
     line-height: 0.8rem;
 }
@@ -71,6 +71,7 @@ html.over {
     z-index: 20;
 }
 
+.p1-txt .btn-arrow,
 .position2 .btn-arrow {
     padding-top: 2.367rem;
     background: url('./imgs/icon-arrow-up.png') no-repeat center top/1.3rem;
@@ -328,6 +329,24 @@ html.over {
     left: 12.6rem;
 }
 
+.m-ribbon .rb-href {
+    bottom: 0;
+    height: 2.4rem;
+    width: 100%;
+    padding-left: 2.5rem;
+    padding-right: 1rem;
+    position: absolute;
+}
+
+.m-ribbon .rb-href a {
+    color: #F2D170;
+    line-height: 2.4rem;
+}
+
+.m-prop-test {
+    margin-top: 0.8rem;
+}
+
 .m-prop {
     position: absolute;
     top: 6.3rem;
@@ -443,9 +462,12 @@ html.over {
 }
 
 .m-prop .mp-a {
-    color: #FFD86B;
     text-align: center;
     margin-top: 0.533rem;
+}
+
+.m-prop .mp-a a {
+    color: #FFD86B;
 }
 
 .modal-content-exp {
@@ -556,4 +578,176 @@ html.over {
     display: block;
     margin: auto;
     margin-top: -0.5rem;
+}
+
+
+/* 应援列表页样式 */
+html,
+body {
+    min-height: 100%;
+    overflow-x: hidden;
+}
+
+.sup-list .tips {
+    color: #565C7A;
+    padding: 0.6rem 0;
+    text-align: center;
+}
+
+.sup-ul {
+    width: 23.5rem;
+    margin: auto;
+}
+
+.sup-ul li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.667rem;
+    background: rgba(57, 61, 80, 1);
+    border-radius: 0.667rem;
+    height: 5.333rem;
+    padding: 0 0.8rem;
+}
+
+.sup-ul li .bg-icon {
+    width: 4.7rem;
+    height: 3.7rem;
+    border-radius: 0.5rem;
+    background: rgba(25, 28, 39, 1) url('./imgs/icon-call.png') no-repeat center/1.6rem;
+}
+
+.sup-ul li .rib-icon {
+    width: 4.7rem;
+    height: 3.7rem;
+    border-radius: 0.5rem;
+    background: rgba(25, 28, 39, 1) url('./imgs/icon-rib.png') no-repeat center/3.367rem;
+}
+
+.sup-ul li .wd-icon {
+    flex: 1;
+    overflow: hidden;
+    margin-left: 0.8rem;
+}
+
+.sup-ul li .wd-icon .wd-p1 {
+    color: #92949B;
+    line-height: 1.2rem;
+}
+
+.sup-ul li .wd-icon .wd-p2 {
+    color: #92949B;
+    line-height: 1.2rem;
+    margin-top: 0rem;
+}
+
+.sup-ul li .wd-icon .wd-p3 {
+    color: #565C7A;
+    line-height: 1rem;
+    margin-top: 0.3rem;
+}
+
+/* 往期赛题样式 */
+.sub-list {
+    padding-left: 0.76rem;
+    overflow: hidden;
+    padding-top: 1.3rem;
+}
+
+.sub-week {
+    margin-bottom: 1rem;
+}
+
+.sub-week .date {
+    width: 9.6rem;
+    height: 1.667rem;
+    line-height: 1.667rem;
+    background: rgba(57, 61, 80, 1);
+    border-radius: 0px 25px 25px 0px;
+    margin-left: -0.76rem;
+    text-align: center;
+    color: #FFFFFF;
+    letter-spacing: 0.1rem;
+    margin-bottom: 0.8rem;
+}
+
+.sub-week .m-work {
+    position: absolute;
+    width: 4.833rem;
+    right: 0.433rem;
+    top: 0.9rem;
+}
+
+.sub-week .qs-box {
+    position: absolute;
+    top: 4.5rem;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 2rem;
+    z-index: 10;
+    color: #565C7A;
+    text-align: center;
+}
+
+.sub-week .qs-box h3 {
+    font-family: HYZhuZiKaKuTi;
+    color: #C6C6C6;
+}
+
+.sub-week .qs-box p {
+    color: #565C7A;
+    margin-top: 0.6rem;
+}
+
+.sub-week .qs-box span {
+    color: #FFD86B;
+}
+
+.sub-week .qs-box span i {
+    font-style: normal;
+}
+
+
+.sub-week .qs-box .swiper-father {
+    position: relative;
+}
+
+.sub-week .qs-box .swiper-container {
+    height: 4rem;
+    margin-top: 1.2rem;
+    width: 80%;
+}
+
+.sub-week .qs-box .swiper-button-prev {
+    background: url('./imgs/icon-left.png') no-repeat center left/1.5rem;
+    outline: none;
+    left: 0;
+}
+
+.sub-week .qs-box .swiper-button-next {
+    background: url('./imgs/icon-right.png') no-repeat center right/1.5rem;
+    outline: none;
+    right: 0;
+}
+
+.sub-week .qs-box .btn-handin {
+    width: 13.1rem;
+    height: 2.967rem;
+    margin: auto;
+    margin-top: 1.6rem;
+    margin-bottom: 0.8rem;
+    background: url('./imgs/icon-handin.png') center/100% 100%;
+}
+
+.sub-week .qs-btn {
+    position: absolute;
+    bottom: 0.45rem;
+    left: 0;
+    right: 0;
+    margin: auto;
+    font-family: PingFang SC;
+    font-weight: 400;
+    background: none;
+    text-align: center;
+    line-height: 1.6rem;
+    width: 50%;
 }

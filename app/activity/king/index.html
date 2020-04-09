@@ -27,8 +27,9 @@
     <div id="page">
         <div class="relative">
             <img src="./imgs/bg-header.png" alt="">
-            <img class="position1" src="./imgs/icon-rule.png" alt="" @click="vshow=true">
+            <img class="position1" src="./imgs/icon-rule.png" alt="" onclick="location.href='./rule.html'">
             <div class="p1-txt fontsize20">
+                <div class="btn-arrow" @click="vshow=true"></div>
                 <p>段子王者之位空悬，江湖中风云再起......</p>
                 <p style="margin-top:0.3rem;">即右响应武林呼声，特此昭告天下，选拔<i>段子王者</i>，执掌武林！</p>
                 <p style="margin-top:0.6rem;">
@@ -76,7 +77,7 @@
                     <div class="btn-handin"></div>
                     <span class="fontsize24">热门作品合集 <i class="fontsize18">》</i></span>
                 </div>
-                <div class="qs-btn fontsize24 color_999">点击查看更多往周赛题</div>
+                <a class="qs-btn fontsize24 color_999" href="./subject.html">点击查看更多往周赛题</a>
             </div>
             <div class="m-ribbon relative">
                 <img src="./imgs/bg-king.png" alt="">
@@ -105,6 +106,9 @@
                     </div>
                     <img class="num" :src="'./imgs/img-'+10+'.png'"></img>
                     <p class="fontsize16">当前还差4个鼓励值即可自动合成</p>
+                </div>
+                <div class="rb-href fontsize24">
+                    <a href="./riblist.html">集满10个鼓励值，合成一条“哎哟不错哦”缎带</a>
                 </div>
             </div>
             <div class="m-prop-test relative">
@@ -144,7 +148,7 @@
                     </div> -->
                     <div class="mp-btn"></div>
                     <p class="mp-p fontsize18">邀请好友注册，可获得友情冲刺卡一张</p>
-                    <p class="mp-a fontsize22"><a>应援记录</a></p>
+                    <p class="mp-a fontsize22"><a href="./support.html">应援记录</a></p>
                 </div>
                 <div class="m-test"></div>
             </div>
