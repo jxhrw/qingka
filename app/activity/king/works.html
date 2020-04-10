@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" style="visibility: hidden;">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="screen-orientation" content="portrait">
+    <meta name="x5-orientation" content="portrait">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>我的参赛作品</title>
+    <script src="../../../res/js/rem.js"></script>
+    <link rel="stylesheet" href="../../../res/css/common.css" />
+    <link rel="stylesheet" href="../../../res/css/prompt.css" />
+    <link rel="stylesheet" href="../../../res/css/swiper-4.2.2.min.css" />
+    <link rel="stylesheet" href="./main.css" />
+    <!-- <link rel="stylesheet" href="//at.alicdn.com/t/font_850244_bpz8dltblc.css" data-concat="false" /> -->
+</head>
+
+<body style="background: #0d0b17;">
+
+    <div id="page" class="work-list">
+        <div class="work-top fontsize20">
+            <div class="work-div" v-show="!hasWork">
+                <p class="null-p1">本周新赛题已公布</p>
+                <p class="null-p2">参与可冲击周榜赢“实力冲刺卡”</p>
+                <i class="btn"></i>
+            </div>
+            <div class="work-div" v-show="hasWork">
+                <p class="has-p1">参与本周赛题作品数量</p>
+                <div class="has-div1 fontsize18"><span class="fontsize30">20</span>个</div>
+                <p class="has-p2">所有参赛作品鼓励值合计</p>
+                <div class="has-div2 fontsize28"><i></i>X10</div>
+            </div>
+            <div class="work-div" style="margin-left: 0.7rem;">
+                <p class="has-p1">参与本周赛题作品鼓励值合计</p>
+                <div class="has-div1 fontsize18"><span class="fontsize30">20</span>个</div>
+                <p class="has-p2">所有参赛作品鼓励值合计</p>
+                <div class="has-div2 fontsize28"><i></i>X10</div>
+            </div>
+        </div>
+        <p class="tips fontsize18">把作品分享给更多好友，可以为作品获取更多的鼓励值哦～</p>
+        <div id="null" style="width: 1rem;height:0;"></div>
+        <ul class="work-ul">
+            <li v-for="(item, index) in 11" :key="index">
+                <div class="img-box">
+                    <img v-if="index%2==0" src="./imgs/img-card1.png" alt="">
+                    <img v-else src="./imgs/img-goodplay.png" alt="">
+                    <i></i>
+                    <p class="fontsize24 text_ellipsis">#段子王者# #题目标题#</p>
+                </div>
+                <div class="wd-box">
+                    <p class="wd-p1 fontsize26">春风十里不如你</p>
+                    <p class="wd-p2 fontsize22"><i></i>鼓励值 10000</p>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <!-- <script src="../../../res/js/rem.js"></script> -->
+    <script src="../../../config/config.js"></script>
+    <script src="../../../res/js/jquery-2.1.4.min.js"></script>
+    <script src="../../../res/js/vue.min.js"></script>
+    <script src="../../../res/js/base64.js"></script>
+    <script src="../../../res/js/common.js"></script>
+    <script src="works.js"></script>
+</body>
+
+</html>

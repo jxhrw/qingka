@@ -158,11 +158,11 @@ html.over {
     margin-top: 0.6rem;
 }
 
-.qs-for-week .qs-box span {
+.qs-for-week .qs-box a {
     color: #FFD86B;
 }
 
-.qs-for-week .qs-box span i {
+.qs-for-week .qs-box a i {
     font-style: normal;
 }
 
@@ -750,4 +750,140 @@ body {
     text-align: center;
     line-height: 1.6rem;
     width: 50%;
+}
+
+/* 我的参赛作品 */
+.work-list {
+    padding: 0.667rem 0.75rem;
+}
+
+.work-top {
+    display: flex;
+}
+
+.work-top .work-div {
+    flex: 1;
+    height: 8.067rem;
+    background: rgba(25, 28, 39, 1);
+    border-radius: 0.667rem;
+    color: #92949B;
+    line-break: 0.7rem;
+    text-align: center;
+}
+
+.work-top .work-div .null-p1 {
+    padding-top: 1.4rem;
+}
+
+.work-top .work-div .null-p2 {
+    padding-top: 0.7rem;
+}
+
+.work-top .work-div .btn {
+    display: block;
+    width: 6.2rem;
+    height: 2.033rem;
+    margin: auto;
+    margin-top: 1.2rem;
+    background: url('./imgs/icon-handin-work.png') no-repeat center/100% 100%;
+}
+
+.work-top .work-div .has-p1 {
+    padding-top: 0.833rem;
+}
+
+.work-top .work-div .has-p2 {
+    padding-top: 0.633rem;
+}
+
+.work-top .work-div .has-div1 {
+    color: #FFD86B;
+    margin-top: 0.9rem;
+}
+
+.work-top .work-div .has-div2 {
+    color: #FFD86B;
+    margin-top: 0.8rem;
+}
+
+.work-top .work-div .has-div2 i {
+    display: inline-block;
+    width: 1.067rem;
+    height: 1.067rem;
+    background: #FFFFFF;
+    position: relative;
+    top: 0.15rem;
+    margin-right: 0.4rem;
+}
+
+.work-list .tips {
+    color: #565C7A;
+    padding: 0.6rem 0;
+    text-align: center;
+}
+
+.work-ul {
+    color: #fff;
+    list-style: none;
+    position: relative;
+}
+
+.work-ul li {
+    background: #fff;
+    width: 11.467rem;
+    position: absolute;
+    border-radius: 0.7rem;
+    overflow: hidden;
+}
+
+.work-ul li .img-box {
+    position: relative;
+}
+
+.work-ul li .img-box img {
+    display: block;
+    background: #000;
+}
+
+.work-ul li .img-box i {
+    display: block;
+    width: 1.6rem;
+    height: 1.6rem;
+    background: url('./imgs/icon-audio.png') no-repeat center/cover;
+    position: absolute;
+    top: 0.4rem;
+    right: 0.4rem;
+}
+
+.work-ul li .img-box p {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    box-sizing: border-box;
+    padding: 0.3rem 0.6rem;
+}
+
+.work-ul li .wd-box {
+    padding: 0.6rem 0.667rem;
+}
+
+.work-ul li .wd-box .wd-p1 {
+    color: #333;
+    line-height: 1rem;
+}
+
+.work-ul li .wd-box .wd-p2 {
+    color: #999;
+    margin-top: 0.7rem;
+}
+
+.work-ul li .wd-box .wd-p2 i {
+    display: inline-block;
+    width: 0.8rem;
+    height: 0.8rem;
+    background: #EA757E;
+    position: relative;
+    top: 0.1rem;
+    margin-right: 0.333rem;
 }
