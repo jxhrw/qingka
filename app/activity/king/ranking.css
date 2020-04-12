@@ -1,0 +1,242 @@
+/* page样式 */
+img {
+    width: 100%;
+}
+
+.fontsize16 {
+    font-size: 0.533rem;
+}
+
+.fontsize18 {
+    font-size: 0.6rem;
+}
+
+.fontsize22 {
+    font-size: 0.733rem;
+}
+
+html,
+body {
+    min-height: 100%;
+    overflow-x: hidden;
+}
+
+/* 我的踢馆赛 */
+.kick .top-btn {
+    display: flex;
+    padding: 1.167rem 0.7rem 0.3rem 0.7rem;
+    text-align: center;
+    justify-content: space-between;
+}
+
+.kick .top-btn .btn {
+    width: 11.4rem;
+    height: 2rem;
+    line-height: 2rem;
+    background: rgba(47, 52, 73, 1);
+    border-radius: 1rem;
+    color: #C2C2C2;
+}
+
+.kick .top-btn .btn.active {
+    background: rgba(255, 216, 107, 1);
+    color: #93211A;
+}
+
+.kick-box {
+    padding: 0 0.75rem;
+}
+
+.kick-box h6 {
+    text-align: center;
+    color: #FFD86B;
+    padding: 0.8rem 0;
+}
+
+.kick-box h6 span {
+    margin: 0 0.567rem;
+    font-weight: 400;
+}
+
+.kick-box h6 i {
+    position: relative;
+    top: 0.1rem;
+}
+
+.kick-ul li {
+    height: 17.167rem;
+    background: url('./imgs/bg-kick.png') no-repeat center/100% 100%;
+    border-radius: 1rem;
+    padding: 0.7rem 0 0.967rem 1.1rem;
+    display: flex;
+    box-sizing: border-box;
+}
+
+.kick-ul li+li {
+    margin-top: 0.8rem;
+}
+
+.kick-ul .ul-img {
+    width: 11.5rem;
+    background: #fff;
+    border-radius: 0.5rem;
+    /* overflow-x: hidden; */
+    position: relative;
+}
+
+.kick-ul .ul-img img {
+    display: block;
+    background: #000;
+    height: 11.5rem;
+}
+
+.kick-ul .ul-img .audo {
+    display: block;
+    width: 1.6rem;
+    height: 1.6rem;
+    background: url('./imgs/icon-audio.png') no-repeat center/cover;
+    position: absolute;
+    top: 0.4rem;
+    right: 0.4rem;
+}
+
+.kick-ul .ul-img .result {
+    width: 8.7rem;
+    height: 4.2rem;
+    position: absolute;
+    top: -2.4rem;
+    left: 50%;
+    transform: translateX(-50%);
+    background: url('./imgs/icon-win.png') no-repeat center/cover;
+}
+
+.kick-ul .ul-img .result.lose {
+    background-image: url('./imgs/icon-lose.png');
+}
+
+.kick-ul .ul-img .wd-box {
+    padding: 0.6rem 0.667rem;
+}
+
+.kick-ul .ul-img .wd-box .wd-p1 {
+    color: #333;
+    line-height: 1rem;
+}
+
+.kick-ul .ul-img .wd-box .wd-p2 {
+    color: #999;
+    margin-top: 0.7rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.kick-ul .ul-img .wd-box .wd-p2 i {
+    display: inline-block;
+    width: 0.8rem;
+    height: 0.8rem;
+    background: #EA757E;
+    position: relative;
+    top: 0.1rem;
+    margin-left: 0.333rem;
+}
+
+.kick-ul .ul-img .wd-box .wd-p2 i.tx {
+    margin-left: 0;
+    margin-right: 0.333rem;
+}
+
+.kick-ul .ul-wd {
+    text-align: center;
+    flex: 1;
+    overflow: hidden;
+}
+
+.kick-ul .ul-wd .kick-p1 {
+    padding-top: 1.3rem;
+    color: #C2C2C2;
+}
+
+.kick-ul .ul-wd .kick-p1 a {
+    color: #C2C2C2;
+    text-decoration: underline;
+}
+
+.kick-ul .ul-wd .kick-p2 {
+    margin-top: 2.4rem;
+    color: #FFD86B;
+}
+
+.kick-ul .ul-wd .kick-p3 {
+    margin-top: 1.8rem;
+    color: #FFD86B;
+    padding-top: 2.6rem;
+    background: url('./imgs/icon-audio.png') no-repeat center top/1.6rem;
+}
+
+.kick-ul .ul-wd img {
+    margin: auto;
+    margin-top: 1.967rem;
+    width: 90%;
+    display: block;
+}
+
+.no-kick {
+    height: 21.967rem;
+    background: url('./imgs/bg-kick-null.png') no-repeat center/100% 100%;
+    display: flex;
+    align-items: center;
+}
+
+.no-kick div {
+    width: 100%;
+}
+
+.no-kick img {
+    width: 4.433rem;
+    display: block;
+    margin: auto;
+}
+
+.no-kick p {
+    text-align: center;
+    color: #92949B;
+    line-height: 0.8rem;
+    margin-top: 1.467rem;
+}
+
+.modal-kick-box {
+    width: 19.8rem;
+    height: 25.267rem;
+    background: url('./imgs/bg-kick-prop.png') no-repeat center/100% 100%;
+}
+
+.kick-prop {
+    padding-top: 4.8rem;
+    text-align: center;
+}
+
+.kick-prop h3 {
+    color: #FFFFFF;
+    margin-top: 1.2rem;
+    line-height: 1.067rem;
+}
+
+.kick-prop p {
+    line-height: 1.2rem;
+    color: #fff;
+    opacity: 0.5;
+    margin-top: 1.067rem;
+    letter-spacing: 0.15rem
+}
+
+.kick-prop .status {
+    display: block;
+    margin: auto;
+    cursor: pointer;
+}
+
+.kick-prop .iknow {
+    display: block;
+    margin: auto;
+
+}

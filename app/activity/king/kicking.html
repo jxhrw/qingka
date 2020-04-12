@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en" style="visibility: hidden;">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="screen-orientation" content="portrait">
+    <meta name="x5-orientation" content="portrait">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>段子王者踢馆赛</title>
+    <script src="../../../res/js/rem.js"></script>
+    <link rel="stylesheet" href="../../../res/css/common.css" />
+    <link rel="stylesheet" href="../../../res/css/prompt.css" />
+    <link rel="stylesheet" href="../../../res/css/swiper-4.2.2.min.css" />
+    <link rel="stylesheet" href="./ranking.css" />
+</head>
+
+<body style="background: #0d0b17;">
+
+    <div id="page" class="kick">
+        <div class="top-btn fontsize24" onclick="showModal('#cklose')">
+            <div class="btn" :class="{'active':isMe}" @click="isMe=true">我的踢馆赛况</div>
+            <div class="btn" :class="{'active':!isMe}" @click="isMe=false">全平台踢馆赛况</div>
+        </div>
+        <div class="tab-div" v-show="isMe">
+            <div class="kick-box">
+                <h6 class="fontsize32"><i>·</i><span class="fontsize24">我的守馆作品</span><i>·</i></h6>
+                <ul class="kick-ul">
+                    <li v-for="(item, index) in 1" :key="index">
+                        <div class="ul-img">
+                            <img src="./imgs/img-card1.png" alt="">
+                            <i class="audo"></i>
+                            <i class="result win"></i>
+                            <div class="wd-box">
+                                <p class="wd-p1 fontsize26">春风十里不如你</p>
+                                <p class="wd-p2 fontsize22"><span><i
+                                            class="tx"></i>xiao幸运</span><span>10000<i></i></span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="ul-wd">
+                            <p class="kick-p1"><a class="fontsize20" href="">我的守馆作品</a></p>
+                            <!-- <p class="kick-p2 fontsize24">踢馆赛期间鼓励值</p>
+                            <p class="kick-p3">1000</p> -->
+                            <img src="./imgs/img-12d.png" alt="">
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="kick-box">
+                <h6 class="fontsize32"><i>·</i><span class="fontsize24">一起踢我的作品</span><i>·</i></h6>
+                <div class="no-kick">
+                    <div>
+                        <img src="./imgs/img-nullStatus.png" alt="">
+                        <p class="fontsize20">您的名号威震武林<br>无人敢找你踢馆</p>
+                    </div>
+                </div>
+                <ul class="kick-ul">
+                    <li v-for="(item, index) in 2" :key="index">
+                        <div class="ul-img">
+                            <img src="./imgs/img-card1.png" alt="">
+                            <i class="audo"></i>
+                            <div class="wd-box">
+                                <p class="wd-p1 fontsize26">春风十里不如你</p>
+                                <p class="wd-p2 fontsize22"><span><i
+                                            class="tx"></i>xiao幸运</span><span>10000<i></i></span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="ul-wd">
+                            <p class="kick-p1"><a class="fontsize20" href="">TA的踢馆作品</a></p>
+                            <p class="kick-p2 fontsize24">踢馆赛期间鼓励值</p>
+                            <p class="kick-p3">1000</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="tab-div" v-show="!isMe">
+
+        </div>
+        <div class="modal" id="cklose">
+            <div class="modal-kick-box relative">
+                <div class="kick-prop">
+                    <h3 class="fontsize32">踢馆赛</h3>
+                    <p class="fontsize24">很遗憾<br>您未能守馆成功，下次要更努力哦~</p>
+                    <img class="status" src="./imgs/icon-comeon.png" alt="" style="width: 9.1rem;margin-top: 1.6rem;">
+                    <img class="status" src="./imgs/icon-iknow.png" alt="" style="width: 7.967rem;margin-top: 1.967rem;"
+                        onclick="closeModal('#cklose')">
+                </div>
+            </div>
+        </div>
+        <div class="modal" id="ckwin">
+            <div class="modal-kick-box relative">
+                <div class="kick-prop">
+                    <h3 class="fontsize32">踢馆赛</h3>
+                    <p class="fontsize24">恭喜您，守馆成功！<br>获得“踢馆冲刺卡”一张</p>
+                    <img class="status" src="./imgs/icon-kickCrad.png" alt=""
+                        style="width: 6.567rem;margin-top: 0.8rem;">
+                    <img class="status" src="./imgs/icon-iknow.png" alt="" style="width: 7.967rem;margin-top: 1.1rem;"
+                        onclick="closeModal('#ckwin')">
+                </div>
+            </div>
+        </div>
+        <div class="modal" id="cknull">
+            <div class="modal-kick-box relative">
+                <div class="kick-prop">
+                    <h3 class="fontsize32">踢馆赛</h3>
+                    <p class="fontsize24">威名太盛，无人敢找你踢馆~</p>
+                    <img class="status" src="./imgs/icon-comeon.png" alt="" style="width: 9.1rem;margin-top: 2.167rem;">
+                    <img class="status" src="./imgs/icon-iknow.png" alt="" style="width: 7.967rem;margin-top: 2.667rem;"
+                        onclick="closeModal('#cknull')">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- <script src="../../../res/js/rem.js"></script> -->
+    <script src="../../../config/config.js"></script>
+    <script src="../../../res/js/jquery-2.1.4.min.js"></script>
+    <script src="../../../res/js/vue.min.js"></script>
+    <script src="../../../res/js/base64.js"></script>
+    <script src="../../../res/js/common.js"></script>
+    <script src="kicking.js"></script>
+</body>
+
+</html>
