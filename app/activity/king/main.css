@@ -887,3 +887,246 @@ body {
     top: 0.1rem;
     margin-right: 0.333rem;
 }
+
+.king-row {
+    width: 23.633rem;
+    height: 7.067rem;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+    padding-left: 0.867rem;
+    background: url('imgs/bg-king-rank.png') no-repeat;
+    background-size: cover;
+}
+
+.head-container {
+    position: relative;
+
+}
+
+.king-head {
+    width: 3.667rem;
+    height: 3.667rem;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 1);
+    border: 0.1rem solid rgba(255, 216, 107, 1);
+    position: relative;
+    z-index: 1;
+}
+
+.king-head-top {
+    width: 4.167rem;
+    position: absolute;
+    top: -0.9rem;
+    left: -0.15rem;
+    z-index: 2;
+}
+
+.king-name {
+    font-size: 0.933rem;
+    color: #fff;
+    width: 5rem;
+    margin-left: 0.667rem;
+}
+
+.king-nums-img {
+    width: 2.5rem;
+}
+
+.king-nums {
+    font-size: 0.8rem;
+    color: #fff;
+}
+
+.icon-to-rank {
+    width: 4.833rem;
+    margin-left: 0.667rem;
+}
+
+.king-row-left {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+}
+
+.map-container {
+    width: 23.633rem;
+    height: 40.067rem;
+    background: url('imgs/bg-map.png') no-repeat;
+    background-size: cover;
+    box-sizing: border-box;
+    margin: 0.8rem auto;
+    position: relative;
+}
+
+.week {
+    position: absolute;
+}
+
+.week-match {
+    width: 6.9rem;
+    height: 5.967rem;
+    text-align: center;
+    position: relative;
+    z-index: 3;
+}
+
+.week-no-begin {
+    background: url('imgs/bg-state-not-begin.png') no-repeat;
+    background-size: cover;
+    color: #666;
+
+}
+
+.week-ing {
+    background: url('imgs/bg-state-ing.png') no-repeat;
+    background-size: cover;
+    color: #5D0000;
+}
+
+.week-over {
+    background: url('imgs/bg-state-over.png') no-repeat;
+    background-size: cover;
+    color: #CF9595;
+}
+
+.week1 {
+    top: 7rem;
+    left: 0.5rem;
+}
+
+.week2 {
+    top: 12.8rem;
+    right: 0.5rem;
+}
+
+.week3 {
+    top: 20rem;
+    left: 0.5rem;
+}
+
+.week4 {
+    top: 29rem;
+    right: 0.5rem;
+}
+
+.week-text {
+    width: 4.133rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    padding-top: 1rem;
+    font-size: 0.6rem;
+    position: relative;
+    z-index: 2;
+}
+
+.week-flag {
+    width: 6.133rem;
+    position: absolute;
+    top: -4rem;
+    left: 1rem;
+    z-index: 1;
+}
+
+.week-tiguan {
+    position: absolute;
+    width: 4.867rem;
+    height: 5.367rem;
+}
+
+
+
+
+.week-tiguan-no-begin {
+    background: url('imgs/bg-tiguan-not-begin.png') no-repeat;
+    background-size: cover;
+    color: #666;
+}
+
+.week-tiguan-ing {
+    background: url('imgs/bg-tiguan-ing.png') no-repeat;
+    background-size: cover;
+    color: #5D0000;
+}
+
+.week-tiguan-over {
+    background: url('imgs/bg-tiguan-over.png') no-repeat;
+    background-size: cover;
+    color: #CF9595;
+}
+
+.week-tiguan1 {
+    top: 7rem;
+    left: 10rem;
+
+}
+
+.week-tiguan2 {
+    top: 17rem;
+    left: 9.8rem;
+
+}
+
+.week-tiguan3 {
+    top: 26rem;
+    left: 7.4rem;
+
+}
+
+.week-tiguan4 {
+    top: 33.6rem;
+    left: 10.8rem;
+}
+
+.reward-container {
+    height: 9.667rem;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: url('imgs/bg-rewards.png') no-repeat;
+    background-size: cover;
+}
+
+.p-text1 {
+    color: #FFD86B;
+    font-size: 0.8rem;
+}
+
+.p-text2 {
+    color: #fff;
+    font-size: 0.667rem;
+    margin-bottom: 0.333rem;
+}
+
+.rewards-bg {
+    width: 5.567rem;
+    height: 3.1rem;
+    background: rgba(13, 13, 20, 1);
+    border-radius: 0.333rem;
+}
+
+.reward-container>div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.067rem 1.467rem;
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.p-text3 {
+    font-size: 0.6rem;
+    color: #fff;
+}
