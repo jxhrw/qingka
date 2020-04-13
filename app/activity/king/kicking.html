@@ -22,11 +22,16 @@
 <body style="background: #0d0b17;">
 
     <div id="page" class="kick">
-        <div class="top-btn fontsize24" onclick="showModal('#cklose')">
+        <div class="top-btn fontsize24">
             <div class="btn" :class="{'active':isMe}" @click="isMe=true">我的踢馆赛况</div>
             <div class="btn" :class="{'active':!isMe}" @click="isMe=false">全平台踢馆赛况</div>
         </div>
         <div class="tab-div" v-show="isMe">
+            <div class="kick-banner">
+                <div class="count-down-box">
+                    <p class="count-down fontsize22">倒计时11:59:59</p>
+                </div>
+            </div>
             <div class="kick-box">
                 <h6 class="fontsize32"><i>·</i><span class="fontsize24">我的守馆作品</span><i>·</i></h6>
                 <ul class="kick-ul">
@@ -43,10 +48,32 @@
                             </div>
                         </div>
                         <div class="ul-wd">
+                            <i class="rank-num">本周周榜TOP1</i>
                             <p class="kick-p1"><a class="fontsize20" href="">我的守馆作品</a></p>
                             <!-- <p class="kick-p2 fontsize24">踢馆赛期间鼓励值</p>
                             <p class="kick-p3">1000</p> -->
-                            <img src="./imgs/img-12d.png" alt="">
+                            <img class="well-begin" src="./imgs/img-12d.png" alt="">
+                        </div>
+                    </li>
+                    <li v-for="(item, index) in 1" :key="index">
+                        <div class="ul-img">
+                            <img src="./imgs/img-card1.png" alt="">
+                            <i class="audo"></i>
+                            <i class="result win"></i>
+                            <div class="wd-box">
+                                <p class="wd-p1 fontsize26">春风十里不如你</p>
+                                <p class="wd-p2 fontsize22"><span><i
+                                            class="tx"></i>xiao幸运</span><span>10000<i></i></span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="ul-wd">
+                            <i class="rank-num">本周周榜TOP1</i>
+                            <p class="kick-p1"><a class="fontsize20" href="">我的守馆作品</a></p>
+                            <!-- <p class="kick-p2 fontsize24">踢馆赛期间鼓励值</p>
+                                <p class="kick-p3">1000</p> -->
+                            <img class="well-tg" src="./imgs/icon-tg.png" alt="">
+                            <img class="well-tempt" src="./imgs/icon-tempt.png" alt="">
                         </div>
                     </li>
                 </ul>
@@ -81,7 +108,56 @@
             </div>
         </div>
         <div class="tab-div" v-show="!isMe">
+            <div class="not-begin" v-show="false">
+                <div>
+                    <img src="./imgs/img-nullStatus.png" alt="">
+                    <p class="fontsize20">12:00<br>踢馆赛正式开赛<br>敬请期待！</p>
+                </div>
+            </div>
 
+            <div class="kick-box">
+                <h6 class="fontsize32"><i>·</i><span class="fontsize24">100人正在参与</span><i>·</i></h6>
+                <ul class="vs-ul">
+                    <li v-for="(item, index) in 2" :key="index">
+                        <i class="icon-vs"></i>
+                        <i class="icon-top"></i>
+                        <div class="vs-sg-box">
+                            <p class="gl-tip fontsize18">踢馆作品</p>
+                            <div class="ul-img">
+                                <img src="./imgs/img-card1.png" alt="">
+                                <i class="audo"></i>
+                                <div class="wd-box">
+                                    <p class="wd-p1 fontsize26">春风十里不如你</p>
+                                    <p class="wd-p2 fontsize22"><span><i
+                                                class="tx"></i>xiao幸运</span><span>10000<i></i></span>
+                                    </p>
+                                </div>
+                            </div>
+                            <p class="gl-tip fontsize18">踢馆赛期间鼓励值</p>
+                            <p class="glz fontsize24"><span>100</span></p>
+                        </div>
+                        <div class="vs-sg-box">
+                            <p class="gl-tip fontsize18">踢馆作品</p>
+                            <div class="ul-img">
+                                <img src="./imgs/img-card1.png" alt="">
+                                <i class="audo"></i>
+                                <div class="wd-box">
+                                    <p class="wd-p1 fontsize26">春风十里不如你</p>
+                                    <p class="wd-p2 fontsize22"><span><i
+                                                class="tx"></i>xiao幸运</span><span>10000<i></i></span>
+                                    </p>
+                                </div>
+                            </div>
+                            <p class="gl-tip fontsize18">踢馆赛期间鼓励值</p>
+                            <p class="glz fontsize24"><span>100</span></p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="my-rank" v-show="isMe">
+            <div class="head fontsize24"><i></i>我的踢馆排名</div>
+            <div class="rank fontsize28">99+</div>
         </div>
         <div class="modal" id="cklose">
             <div class="modal-kick-box relative">

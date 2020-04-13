@@ -43,6 +43,33 @@ body {
     color: #93211A;
 }
 
+.kick-banner {
+    width: 23.5rem;
+    height: 12.333rem;
+    margin: auto;
+    background: url('./imgs/img-kick-banner.png') no-repeat center/100% 100%;
+    margin-top: 1.2rem;
+    position: relative;
+}
+
+.kick-banner .count-down-box {
+    width: 6.833rem;
+    height: 4.333rem;
+    background: url('./imgs/icon-countTime.png') no-repeat center/100% 100%;
+    position: absolute;
+    top: -0.7rem;
+    left: -0.5rem;
+}
+
+.kick-banner .count-down {
+    color: #fff;
+    text-align: center;
+    transform: rotate(-24deg);
+    position: relative;
+    top: 1.25rem;
+    left: -0.3rem;
+}
+
 .kick-box {
     padding: 0 0.75rem;
 }
@@ -148,11 +175,30 @@ body {
 .kick-ul .ul-wd {
     text-align: center;
     flex: 1;
-    overflow: hidden;
+    /* overflow: hidden; */
+    position: relative;
+}
+
+.kick-ul .ul-wd .rank-num {
+    position: absolute;
+    top: -0.7rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 8.167rem;
+    height: 2rem;
+    border-radius: 0 0 1rem 1rem;
+    background: rgba(255, 216, 107, 1);
+    border: 1px solid rgba(67, 71, 89, 1);
+    font-weight: 600;
+    color: #93211A;
+    text-align: center;
+    line-height: 2rem;
+    letter-spacing: 0.05rem;
+    font-style: normal;
 }
 
 .kick-ul .ul-wd .kick-p1 {
-    padding-top: 1.3rem;
+    padding-top: 1.6rem;
     color: #C2C2C2;
 }
 
@@ -173,10 +219,24 @@ body {
     background: url('./imgs/icon-audio.png') no-repeat center top/1.6rem;
 }
 
-.kick-ul .ul-wd img {
+.kick-ul .ul-wd .well-begin {
     margin: auto;
-    margin-top: 1.967rem;
-    width: 90%;
+    margin-top: 1.467rem;
+    width: 85%;
+    display: block;
+}
+
+.kick-ul .ul-wd .well-tg {
+    margin: auto;
+    margin-top: 2.7rem;
+    width: 4.67rem;
+    display: block;
+}
+
+.kick-ul .ul-wd .well-tempt {
+    margin-left: 1.7rem;
+    margin-top: 1rem;
+    width: 4.9rem;
     display: block;
 }
 
@@ -239,4 +299,212 @@ body {
     display: block;
     margin: auto;
 
+}
+
+
+.not-begin {
+    width: 23.5rem;
+    height: calc(100vh - 6rem);
+    margin: auto;
+    margin-top: 1.1rem;
+    /* background: url('./imgs/bg-kick-null.png') no-repeat center/100% 100%; */
+    background: rgba(25, 28, 39, 1);
+    border: 1px solid rgba(255, 216, 107, 0.5);
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.not-begin div {
+    width: 100%;
+}
+
+.not-begin img {
+    width: 4.433rem;
+    display: block;
+    margin: auto;
+}
+
+.not-begin p {
+    text-align: center;
+    color: #92949B;
+    line-height: 1rem;
+    margin-top: 1.467rem;
+}
+
+.vs-ul li {
+    /* height: 17.167rem; */
+    background: rgba(25, 28, 39, 1);
+    border: 1px solid rgba(255, 216, 107, 0.5);
+    border-radius: 1rem;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 0.667rem;
+    position: relative;
+}
+
+.vs-ul li+li {
+    margin-top: 0.8rem;
+}
+
+.vs-ul .vs-sg-box {
+    width: 10rem;
+}
+
+.vs-ul .vs-sg-box h4 {
+    text-align: center;
+    font-weight: 400;
+    color: #C2C2C2;
+    line-height: 0.6rem;
+    padding: 0.6rem 0;
+}
+
+.vs-ul .vs-sg-box .gl-tip {
+    text-align: center;
+    font-weight: 400;
+    color: #C2C2C2;
+    line-height: 0.6rem;
+    padding: 0.6rem 0;
+}
+
+.vs-ul .vs-sg-box .glz {
+    text-align: center;
+    padding: 0.2rem 0 0.8rem;
+}
+
+.vs-ul .vs-sg-box .glz span {
+    display: inline-block;
+    padding-left: 1.5rem;
+    height: 1.2rem;
+    line-height: 1.2rem;
+    color: #FFD86B;
+    font-family: HYZhuZiSuDaHei;
+    background: no-repeat center left/1.2rem 1.2rem;
+}
+
+.vs-ul .icon-top {
+    position: absolute;
+    width: 5.267rem;
+    height: 3.067rem;
+    background: url('./imgs/icon-top.png') no-repeat center/100% 100%;
+    left: 0.667rem;
+    top: 1.8rem;
+    z-index: 10;
+}
+
+.vs-ul .icon-vs {
+    position: absolute;
+    width: 5.8rem;
+    height: 11.5rem;
+    background: url('./imgs/icon-vs.png') no-repeat center/100% 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 1.8rem;
+    z-index: 10;
+}
+
+.vs-ul .ul-img {
+    width: 100%;
+    background: #fff;
+    border-radius: 0.5rem;
+    /* overflow-x: hidden; */
+    position: relative;
+}
+
+.vs-ul .ul-img img {
+    display: block;
+    background: #000;
+    height: 11.5rem;
+}
+
+.vs-ul .ul-img .audo {
+    display: block;
+    width: 1.6rem;
+    height: 1.6rem;
+    background: url('./imgs/icon-audio.png') no-repeat center/cover;
+    position: absolute;
+    top: 0.4rem;
+    right: 0.4rem;
+}
+
+.vs-ul .ul-img .result {
+    width: 8.7rem;
+    height: 4.2rem;
+    position: absolute;
+    top: -2.4rem;
+    left: 50%;
+    transform: translateX(-50%);
+    background: url('./imgs/icon-win.png') no-repeat center/cover;
+}
+
+.vs-ul .ul-img .result.lose {
+    background-image: url('./imgs/icon-lose.png');
+}
+
+.vs-ul .ul-img .wd-box {
+    padding: 0.6rem 0.667rem;
+}
+
+.vs-ul .ul-img .wd-box .wd-p1 {
+    color: #333;
+    line-height: 1rem;
+}
+
+.vs-ul .ul-img .wd-box .wd-p2 {
+    color: #999;
+    margin-top: 0.7rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.vs-ul .ul-img .wd-box .wd-p2 i {
+    display: inline-block;
+    width: 0.8rem;
+    height: 0.8rem;
+    background: #EA757E;
+    position: relative;
+    top: 0.1rem;
+    margin-left: 0.333rem;
+}
+
+.vs-ul .ul-img .wd-box .wd-p2 i.tx {
+    margin-left: 0;
+    margin-right: 0.333rem;
+}
+
+.my-rank {
+    /* width: 100%; */
+    height: 3.8rem;
+    background: rgba(57, 61, 80, 1);
+    border-radius: 0.667rem 0.667rem 0 0;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 0 1.467rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.my-rank .head {
+    color: #fff;
+    line-height: 2.733rem;
+}
+
+.my-rank .head i {
+    display: block;
+    width: 2.733rem;
+    height: 2.733rem;
+    border-radius: 2rem;
+    background: #fff;
+    float: left;
+    margin-right: 0.8rem;
+}
+
+.my-rank .rank {
+    font-family: HYZhuZiSuDaHei;
+    color: #FFD86B;
 }
