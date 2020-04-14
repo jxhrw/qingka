@@ -16,6 +16,7 @@ var pageData = new Vue({
 
 $('body').css('visibility', 'visible');
 $(function () {
+
     scrollTop = 0;
     var isloading = false;
     var windowHeight = $(window).height();

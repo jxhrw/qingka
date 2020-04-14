@@ -270,6 +270,18 @@ body {
     background: url('./imgs/bg-kick-prop.png') no-repeat center/100% 100%;
 }
 
+.modal-kick-box-lg {
+    width: 19.8rem;
+    height: 32.167rem;
+    background: url('./imgs/bg-kick-large.png') no-repeat center/100% 100%;
+}
+
+.modal-kick-box-sm {
+    width: 19.8rem;
+    height: 18.267rem;
+    background: url('./imgs/bg-kick-small.png') no-repeat center/100% 100%;
+}
+
 .kick-prop {
     padding-top: 4.8rem;
     text-align: center;
@@ -281,12 +293,19 @@ body {
     line-height: 1.067rem;
 }
 
-.kick-prop p {
+.kick-prop .p {
     line-height: 1.2rem;
     color: #fff;
     opacity: 0.5;
     margin-top: 1.067rem;
     letter-spacing: 0.15rem
+}
+
+.kick-prop .p2 {
+    line-height: 1.2rem;
+    color: #F8D86A;
+    margin-top: 0.9rem;
+    letter-spacing: 0.05rem
 }
 
 .kick-prop .status {
@@ -299,6 +318,118 @@ body {
     display: block;
     margin: auto;
 
+}
+
+.kick-prop .zan {
+    width: 6.567rem;
+    margin: auto;
+    margin-top: 1.15rem;
+    height: 7.8rem;
+    background: #393D50;
+    border-radius: 0.8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.kick-prop .zan i {
+    height: 3rem;
+    width: 3rem;
+    background: #fff;
+    display: block;
+    margin: auto;
+}
+
+.kick-prop .zan p {
+    text-align: center;
+    color: #FFD754;
+    margin-top: 0.7rem;
+}
+
+
+.kick-prop .ul-img {
+    width: 11.5rem;
+    background: #fff;
+    border-radius: 0.5rem;
+    /* overflow-x: hidden; */
+    position: relative;
+    margin: auto;
+    margin-top: 0.8rem;
+}
+
+.kick-prop .ul-img img {
+    display: block;
+    background: #000;
+    height: 11.5rem;
+}
+
+.kick-prop .ul-img .audo {
+    display: block;
+    width: 1.6rem;
+    height: 1.6rem;
+    background: url('./imgs/icon-audio.png') no-repeat center/cover;
+    position: absolute;
+    top: 0.4rem;
+    right: 0.4rem;
+}
+
+.kick-prop .ul-img .result {
+    width: 8.7rem;
+    height: 4.2rem;
+    position: absolute;
+    top: -2.4rem;
+    left: 50%;
+    transform: translateX(-50%);
+    background: url('./imgs/icon-win.png') no-repeat center/cover;
+}
+
+.kick-prop .ul-img .result.lose {
+    background-image: url('./imgs/icon-lose.png');
+}
+
+.kick-prop .ul-img .wd-box {
+    padding: 0.6rem 0.667rem;
+}
+
+.kick-prop .ul-img .wd-box .wd-p1 {
+    color: #333;
+    line-height: 1rem;
+}
+
+.kick-prop .ul-img .wd-box .wd-p2 {
+    color: #999;
+    margin-top: 0.7rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.kick-prop .ul-img .wd-box .wd-p2 i {
+    display: inline-block;
+    width: 0.8rem;
+    height: 0.8rem;
+    background: #EA757E;
+    position: relative;
+    top: 0.1rem;
+    margin-left: 0.333rem;
+}
+
+.kick-prop .ul-img .wd-box .wd-p2 i.tx {
+    margin-left: 0;
+    margin-right: 0.333rem;
+}
+
+.kick-prop .flex {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 2.5rem;
+    margin-top: 0.8rem;
+}
+
+.kick-prop .flex span {
+    display: flex;
+    width: 6.6rem;
+    height: 2.2rem;
+    background-size: 100% 100%;
 }
 
 
@@ -507,4 +638,56 @@ body {
 .my-rank .rank {
     font-family: HYZhuZiSuDaHei;
     color: #FFD86B;
+}
+
+/* 与main.css一样的 */
+.modal-content-exp {
+    width: 23.5rem;
+    background: rgba(25, 28, 39, 1);
+    border: 1px solid rgba(255, 216, 107, 0.5);
+    border-radius: 1rem;
+    padding: 1.3rem 0 1.3rem 0;
+}
+
+.modal-content-exp .icon-close {
+    width: 1.5rem;
+    height: 1.5rem;
+    position: absolute;
+    top: 0.6rem;
+    right: 0.6rem;
+}
+
+.modal-content-exp .md-title {
+    /* width: 7.5rem; */
+    width: auto;
+    height: 1.367rem;
+    display: block;
+    margin: auto;
+}
+
+.modal-content-exp .md-div {
+    background: rgba(57, 61, 80, 1);
+    border: 1px solid rgba(255, 216, 107, 0.5);
+    border-radius: 1rem;
+    width: 21.357rem;
+    margin: auto;
+    margin-top: 1.333rem;
+    box-sizing: border-box;
+    padding: 1.4rem 0.7rem 1.4rem 1.6rem;
+}
+
+.modal-content-exp .md-div ol {
+    padding-left: 0.8rem;
+    letter-spacing: 0.15rem;
+}
+
+.modal-content-exp .md-div ol li {
+    line-height: 1.5rem;
+    color: #FFD86B;
+}
+
+.modal-content-exp .md-p {
+    color: #565C7A;
+    text-align: center;
+    margin-top: 1.2rem;
 }

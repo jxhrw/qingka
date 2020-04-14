@@ -23,7 +23,7 @@
 <body style="background: #0d0b17;">
 
     <div id="page" class="work-list">
-        <div class="work-top fontsize20">
+        <div class="work-top fontsize20" onclick="showModal('#propExp')">
             <div class="work-div" v-show="!hasWork">
                 <p class="null-p1">本周新赛题已公布</p>
                 <p class="null-p2">参与可冲击周榜赢“实力冲刺卡”</p>
@@ -58,6 +58,20 @@
                 </div>
             </li>
         </ul>
+
+        <div class="modal" id="propExp">
+            <div class="modal-content-exp relative">
+                <img src="./imgs/icon-close.png" class="icon-close" onclick="closeModal('#propExp')" alt="">
+                <img src="./imgs/icon-title-work.png" class="md-title" alt="">
+                <div class="md-div">
+                    <ol class="fontsize22">
+                        <li>每周一00:00发布本周赛题，需要参与本周赛题才能进入周榜哦～；</li>
+                        <li>作品的点赞量，评论量，收听量都将转为同等 数量的鼓励值；</li>
+                        <li>转化魔法有限，同一天内同一个人的评论只有 一条可以转化为鼓励值哦～。</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
     </div>
 
     <!-- <script src="../../../res/js/rem.js"></script> -->

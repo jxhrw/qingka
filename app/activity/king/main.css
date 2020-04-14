@@ -487,7 +487,9 @@ html.over {
 }
 
 .modal-content-exp .md-title {
-    width: 7.5rem;
+    /* width: 7.5rem; */
+    width: auto;
+    height: 1.367rem;
     display: block;
     margin: auto;
 }

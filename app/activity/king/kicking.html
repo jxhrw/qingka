@@ -155,7 +155,7 @@
                 </ul>
             </div>
         </div>
-        <div class="my-rank" v-show="isMe">
+        <div class="my-rank" v-show="isMe" @click="showModal('#propExp')">
             <div class="head fontsize24"><i></i>我的踢馆排名</div>
             <div class="rank fontsize28">99+</div>
         </div>
@@ -163,10 +163,21 @@
             <div class="modal-kick-box relative">
                 <div class="kick-prop">
                     <h3 class="fontsize32">踢馆赛</h3>
-                    <p class="fontsize24">很遗憾<br>您未能守馆成功，下次要更努力哦~</p>
+                    <p class="fontsize24 p">很遗憾<br>您未能守馆成功，下次要更努力哦~</p>
                     <img class="status" src="./imgs/icon-comeon.png" alt="" style="width: 9.1rem;margin-top: 1.6rem;">
                     <img class="status" src="./imgs/icon-iknow.png" alt="" style="width: 7.967rem;margin-top: 1.967rem;"
                         onclick="closeModal('#cklose')">
+                </div>
+            </div>
+        </div>
+        <div class="modal" id="cklose2">
+            <div class="modal-kick-box relative">
+                <div class="kick-prop">
+                    <h3 class="fontsize32">踢馆赛</h3>
+                    <p class="fontsize24 p">很遗憾<br>您未能踢馆成功，下周再来试试吧！</p>
+                    <img class="status" src="./imgs/icon-comeon.png" alt="" style="width: 9.1rem;margin-top: 1.6rem;">
+                    <img class="status" src="./imgs/icon-iknow.png" alt="" style="width: 7.967rem;margin-top: 1.967rem;"
+                        onclick="closeModal('#cklose2')">
                 </div>
             </div>
         </div>
@@ -174,7 +185,7 @@
             <div class="modal-kick-box relative">
                 <div class="kick-prop">
                     <h3 class="fontsize32">踢馆赛</h3>
-                    <p class="fontsize24">恭喜您，守馆成功！<br>获得“踢馆冲刺卡”一张</p>
+                    <p class="fontsize24 p">恭喜您，守馆成功！<br>获得“踢馆冲刺卡”一张</p>
                     <img class="status" src="./imgs/icon-kickCrad.png" alt=""
                         style="width: 6.567rem;margin-top: 0.8rem;">
                     <img class="status" src="./imgs/icon-iknow.png" alt="" style="width: 7.967rem;margin-top: 1.1rem;"
@@ -182,17 +193,106 @@
                 </div>
             </div>
         </div>
+        <div class="modal" id="ckwin2">
+            <div class="modal-kick-box relative">
+                <div class="kick-prop">
+                    <h3 class="fontsize32">踢馆赛2</h3>
+                    <p class="fontsize24 p">恭喜您，守馆成功！<br>获得“踢馆冲刺卡”一张</p>
+                    <div class="relative">
+                        <img class="status" src="./imgs/icon-kickCrad.png" alt=""
+                            style="width: 6.567rem;margin-top: 0.8rem;">
+                        <p class="fontsize18"
+                            style="width: 6.567rem;position:absolute;bottom: 0.8rem;left: 0;right: 0;margin: auto;letter-spacing: 0;color: #FFD754;opacity: 0.4;;line-height: 0.667rem;">
+                            2020-03-01对<br>[用户昵称]踢馆成功</p>
+                    </div>
+                    <img class="status" src="./imgs/icon-iknow.png" alt="" style="width: 7.967rem;margin-top: 1.1rem;"
+                        onclick="closeModal('#ckwin2')">
+                </div>
+            </div>
+        </div>
+        <div class="modal" id="ckwin3">
+            <div class="modal-kick-box relative">
+                <div class="kick-prop">
+                    <h3 class="fontsize32">踢馆赛2</h3>
+                    <p class="fontsize24 p">恭喜您<br>在踢馆赛中超过踢馆目标用户<br>获得5个鼓励值！</p>
+                    <div class="relative">
+                        <div class="zan">
+                            <div>
+                                <i></i>
+                                <p class="fontsize30">+5</p>
+                            </div>
+                        </div>
+                    </div>
+                    <img class="status" src="./imgs/icon-iknow.png" alt="" style="width: 7.967rem;margin-top: 1.1rem;"
+                        onclick="closeModal('#ckwin3')">
+                </div>
+            </div>
+        </div>
         <div class="modal" id="cknull">
             <div class="modal-kick-box relative">
                 <div class="kick-prop">
                     <h3 class="fontsize32">踢馆赛</h3>
-                    <p class="fontsize24">威名太盛，无人敢找你踢馆~</p>
+                    <p class="fontsize24 p">威名太盛，无人敢找你踢馆~</p>
                     <img class="status" src="./imgs/icon-comeon.png" alt="" style="width: 9.1rem;margin-top: 2.167rem;">
                     <img class="status" src="./imgs/icon-iknow.png" alt="" style="width: 7.967rem;margin-top: 2.667rem;"
                         onclick="closeModal('#cknull')">
                 </div>
             </div>
         </div>
+        <div class="modal" id="ckhaswork">
+            <div class="modal-kick-box-lg relative">
+                <div class="kick-prop">
+                    <h3 class="fontsize32">选择作品</h3>
+                    <p class="fontsize24 p">请在下方选择您要参赛的作品</p>
+                    <div class="ul-img">
+                        <img src="./imgs/img-card1.png" alt="">
+                        <i class="audo"></i>
+                        <div class="wd-box">
+                            <p class="wd-p1 fontsize26">春风十里不如你</p>
+                            <p class="wd-p2 fontsize22"><span><i class="tx"></i>xiao幸运</span><span>10000<i></i></span>
+                            </p>
+                        </div>
+                    </div>
+                    <p class="fontsize24 p2">去创作新作品</p>
+                    <div class="flex">
+                        <span style="background-image:url('./imgs/btn-giveup.png')"
+                            onclick="closeModal('#ckhaswork')"></span>
+                        <span style="background-image:url('./imgs/btn-create.png')"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal" id="cknowork">
+            <div class="modal-kick-box-sm relative">
+                <div class="kick-prop">
+                    <h3 class="fontsize32">选择作品</h3>
+                    <p class="fontsize24 p" style="margin-top: 2.5rem;">您还未参与本周的赛题创作，<br>不能参与踢馆哦~</p>
+                    <div class="flex" style="margin-top: 2.2rem;">
+                        <span style="background-image:url('./imgs/btn-giveup.png')"
+                            onclick="closeModal('#cknowork')"></span>
+                        <span style="background-image:url('./imgs/btn-create.png')"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal" id="propExp">
+            <div class="modal-content-exp relative">
+                <img src="./imgs/icon-close.png" class="icon-close" onclick="closeModal('#propExp')" alt="">
+                <img src="./imgs/icon-title-kick.png" class="md-title" alt="">
+                <div class="md-div">
+                    <ol class="fontsize22" style="letter-spacing: 0;">
+                        <li>每周六00:00至12:00，开放“我要踢馆”功能；</li>
+                        <li>用户可选择周榜前十名的用户进行踢馆，前十名的用户不能对他人踢馆，但是也需要努力守馆哦~；</li>
+                        <li>踢馆赛自周六12:00正式开始，周日24:00结算，根据踢馆时间内的鼓励值获得情况评定结果；</li>
+                        <li>被踢馆的用户默认使用入选周榜的作品参赛，踢馆的选手在本周赛题作品中选取一个参赛；</li>
+                        <li>踢馆正式开始后，作品获得的鼓励值、好友应援的鼓励值、还有玩测一测中的幸运转盘抽取的鼓励值都能帮你 增加踢馆的鼓励值哦~；</li>
+                        <li>踢馆时间内，鼓励值超过被踢馆用户，且在众多踢馆选手中排名第一的用户踢馆胜出，获得“踢馆冲刺卡”一张，其他超过被踢馆用户，但是没拿到第一的用户可以获得5个鼓励值；</li>
+                        <li>踢馆时间内，没有选手鼓励值未超过被踢馆用户，那么被踢馆用户守馆成功，获得“踢馆冲刺卡”一张，若被任何一位选手超过，则守馆失败。</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+
     </div>
 
     <!-- <script src="../../../res/js/rem.js"></script> -->
