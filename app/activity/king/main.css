@@ -112,19 +112,19 @@ html.over {
 }
 
 .i-title .tt1 {
-    background-image: url('./imgs/icon-ph.png');
-}
-
-.i-title .tt1.active {
-    background-image: url('./imgs/icon-ph-active.png');
-}
-
-.i-title .tt2 {
     background-image: url('./imgs/icon-cs.png');
 }
 
-.i-title .tt2.active {
+.i-title .tt1.active {
     background-image: url('./imgs/icon-cs-active.png');
+}
+
+.i-title .tt2 {
+    background-image: url('./imgs/icon-ph.png');
+}
+
+.i-title .tt2.active {
+    background-image: url('./imgs/icon-ph-active.png');
 }
 
 /* 以下是排行榜 */

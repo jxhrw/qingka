@@ -53,10 +53,10 @@
             </div>
         </div>
         <div class="i-title">
-            <div class="btn-title tt1 active"></div>
-            <div class="btn-title tt2"></div>
+            <div class="btn-title tt1" :class="{'active': activeTab=='cs'}" @click="activeTab='cs'"></div>
+            <div class="btn-title tt2" :class="{'active': activeTab=='ph'}" @click="activeTab='ph'"></div>
         </div>
-        <div class="tab-ph" style="display:none">
+        <div class="tab-ph" v-show="activeTab=='cs'">
             <div class="qs-for-week relative">
                 <img src="./imgs/bg-questions.png" alt="">
                 <img class="m-work" src="./imgs/icon-mywork.png" alt="">
@@ -184,7 +184,7 @@
         </div>
 
         <!-- 王者排行榜 -->
-        <div class="tab-rank">
+        <div class="tab-rank" v-show="activeTab=='ph'">
             <!--总榜王者-->
             <div class="king-row">
                 <div class="king-row-left">
