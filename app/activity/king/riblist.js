@@ -1,15 +1,44 @@
 var pageData = new Vue({
     el: '#page',
     data: {
-        num: 10,
+        pageNum: 1,
+        list: []
     },
     methods: {
-
+        // 缎带获取记录
+        getRibbonInfo: function (pageNum) {
+            request('/right/activity/joke/get_ribbon_list', {
+                // user_id: uid,
+                version: version,
+                page: pageNum,
+                page_size: 10,
+            }, function (res) {
+                console.log(res);
+                var arr = res.list || [];
+                _this.list = _this.list.concat(arr);
+            });
+        },
     },
     mounted() {
-
+        _this = this;
+        getSid();
+        this.getRibbonInfo(this.pageNum);
     },
 })
+
+function getSid() {
+    if (get_url_para('sid')) {
+        base64Sid = get_url_para('sid');
+        var sessionId = get_url_para('sid'); //获取用户id
+        var sid = Base.decode(sessionId);
+        var sidArr = sid.split('_');
+        uid = sidArr[sidArr.length - 1];
+        if (uid.indexOf('h5') > 0) {
+            uid = uid.split('h5')[0]
+        }
+        version.sid = sid;
+    }
+}
 
 
 
@@ -25,7 +54,8 @@ $(function () {
             if (!isloading) {
                 console.log('加载');
                 setTimeout(function () {
-                    pageData._data.num += 10;
+                    pageData._data.pageNum++;
+                    pageData.getRibbonInfo(pageData._data.pageNum);
                     isloading = false;
                 }, 1000)
             }

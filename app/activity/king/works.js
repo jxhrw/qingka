@@ -4,13 +4,37 @@ var pageData = new Vue({
         hasWork: true,
     },
     methods: {
-
+        // 获取段子王者活动信息
+        getInfo: function () {
+            request('/right/activity/joke/get_works', {
+                user_id: uid,
+                version: version
+            }, function (res) {
+                console.log(res);
+            });
+        },
     },
     mounted() {
-
+        _this = this;
+        getSid();
+        this.getInfo();
     },
 })
 
+function getSid() {
+    if (get_url_para('sid')) {
+        base64Sid = get_url_para('sid');
+        var sessionId = get_url_para('sid'); //获取用户id
+        var sid = Base.decode(sessionId);
+        var sidArr = sid.split('_');
+        uid = sidArr[sidArr.length - 1];
+        if (uid.indexOf('h5') > 0) {
+            uid = uid.split('h5')[0]
+        }
+        version.sid = sid;
+
+    }
+}
 
 
 $('body').css('visibility', 'visible');

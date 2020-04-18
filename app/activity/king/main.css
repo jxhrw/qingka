@@ -175,6 +175,16 @@ html.over {
     height: 4rem;
     margin-top: 1.2rem;
     width: 80%;
+    overflow-y: auto;
+}
+
+.qs-for-week .qs-box .swiper-container img {
+    height: 100%;
+    width: 100%;
+    display: block;
+    height: calc(100% + 2rem);
+    position: relative;
+    top: -2rem;
 }
 
 .qs-for-week .qs-box .swiper-button-prev {
@@ -226,10 +236,16 @@ html.over {
 }
 
 .m-ribbon .k-num {
-    width: 1.6rem;
+    /* width: 1.6rem; */
+    width: auto;
+    height: 0.9rem;
     position: absolute;
     top: 6rem;
     right: 1rem;
+}
+
+.m-ribbon .k-num img {
+    width: auto;
 }
 
 .m-ribbon .rb-box {
@@ -274,7 +290,7 @@ html.over {
     border-radius: 1rem;
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 1.6rem;
+    background-size: auto 0.9rem;
 }
 
 .m-ribbon .rb-line-box.blue {
@@ -302,7 +318,8 @@ html.over {
 }
 
 .m-ribbon .num {
-    width: 1.6rem;
+    /* width: 1.6rem; */
+    width: auto;
     height: 0.9rem;
     margin-right: 0.2rem;
     margin-top: 0.35rem;
@@ -336,11 +353,28 @@ html.over {
     padding-left: 2.5rem;
     padding-right: 1rem;
     position: absolute;
+    box-sizing: border-box;
 }
 
 .m-ribbon .rb-href a {
     color: #F2D170;
     line-height: 2.4rem;
+}
+
+.m-ribbon .rb-href .message_container {
+    width: 20rem;
+    height: 2.4rem;
+    box-sizing: border-box;
+    color: #fff;
+    line-height: 2.4rem;
+    overflow: hidden;
+    color: #F2D170;
+}
+
+.m-ribbon .rb-href .message_container p {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
 
 .m-prop-test {
@@ -417,6 +451,10 @@ html.over {
     margin-left: 0.467rem;
 }
 
+.m-prop .mp-ul li img {
+    height: 9.433rem;
+}
+
 .m-prop .mp-ul li p {
     line-height: 0.567rem;
     color: #565C7A;
@@ -446,6 +484,8 @@ html.over {
     left: 0;
     right: 0;
     top: 7.1rem;
+    padding: 0 0.8rem;
+    white-space: normal;
 }
 
 .m-prop .mp-btn {
@@ -468,6 +508,19 @@ html.over {
 
 .m-prop .mp-a a {
     color: #FFD86B;
+}
+
+.m-test {
+    position: absolute;
+    top: 32.7rem;
+    width: 100%;
+    left: 0;
+}
+
+.m-test img {
+    margin: auto;
+    display: block;
+    width: 17.633rem;
 }
 
 .modal-content-exp {
@@ -594,6 +647,28 @@ body {
     color: #565C7A;
     padding: 0.6rem 0;
     text-align: center;
+}
+
+.sup-list .null-div,
+.sup-list .bottom-div {
+    /* height: 2.4rem; */
+    padding: 0.3rem 0;
+}
+
+.sup-list .bottom-div {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    color: #92949B;
+    text-align: center;
+    line-height: 1.2rem;
+}
+
+.sup-list .bottom-div span {
+    color: #FFD86B;
+    text-decoration: underline;
+    opacity: 0.3;
 }
 
 .sup-ul {
@@ -977,20 +1052,20 @@ body {
     z-index: 3;
 }
 
-.week-no-begin {
+.week-0 {
     background: url('imgs/bg-state-not-begin.png') no-repeat;
     background-size: cover;
     color: #666;
 
 }
 
-.week-ing {
+.week-1 {
     background: url('imgs/bg-state-ing.png') no-repeat;
     background-size: cover;
     color: #5D0000;
 }
 
-.week-over {
+.week-2 {
     background: url('imgs/bg-state-over.png') no-repeat;
     background-size: cover;
     color: #CF9595;
@@ -1027,6 +1102,7 @@ body {
     font-size: 0.6rem;
     position: relative;
     z-index: 2;
+    text-align: center;
 }
 
 .week-flag {
@@ -1046,19 +1122,19 @@ body {
 
 
 
-.week-tiguan-no-begin {
+.week-tiguan-0 {
     background: url('imgs/bg-tiguan-not-begin.png') no-repeat;
     background-size: cover;
     color: #666;
 }
 
-.week-tiguan-ing {
+.week-tiguan-1 {
     background: url('imgs/bg-tiguan-ing.png') no-repeat;
     background-size: cover;
     color: #5D0000;
 }
 
-.week-tiguan-over {
+.week-tiguan-2 {
     background: url('imgs/bg-tiguan-over.png') no-repeat;
     background-size: cover;
     color: #CF9595;

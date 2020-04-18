@@ -23,22 +23,22 @@
 <body style="background: #0d0b17;">
 
     <div id="page" class="sub-list">
-        <div class="sub-week relative" v-for="(item, index) in 4" :key="index">
+        <div class="sub-week relative" v-for="(item, index) in list" :key="index">
             <p class="date fontsize24">2020年4/20-4/26</p>
             <img src="./imgs/bg-sub.png" alt="">
             <div class="qs-box">
-                <h3 class="fontsize36">表情题（一）</h3>
+                <h3 class="fontsize36">
+                    {{item.question_list.length>0?(item.question_list[aindex['realIndex_'+index]].title||''):''}}</h3>
                 <p class="fontsize24">将下列表情组装成一个小故事</p>
                 <div class="swiper-father">
-                    <div class="swiper-container" id="weeksQs">
+                    <div class="swiper-container" :id="'weeksQs'+index">
                         <div class="swiper-wrapper">
-                            <div class="swiper-slide">slider1</div>
-                            <div class="swiper-slide">slider2</div>
-                            <div class="swiper-slide">slider3</div>
+                            <div class="swiper-slide" v-for="(item2, index2) in item.question_list" :key="index"><img
+                                    :src="item.img_url" alt="">{{index2}}</div>
                         </div>
                     </div>
-                    <div class="swiper-button-prev"></div>
-                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev" :class="'swiper-button-prev'+index"></div>
+                    <div class="swiper-button-next" :class="'swiper-button-next'+index"></div>
                 </div>
                 <div class="btn-handin"></div>
                 <span class="fontsize24">热门作品合集 <i class="fontsize18">》</i></span>

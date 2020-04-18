@@ -45,10 +45,10 @@
                 <div class="btn-arrow" @click="vshow=false"></div>
                 <img class="position" :src="'./imgs/img-goodplay.png'" alt="">
                 <ul class="p2-ul fontsize18">
-                    <li class="text_ellipsis">xxx人正在参与</li>
-                    <li class="text_ellipsis">敬请期待</li>
-                    <li class="text_ellipsis">xxx人正在参与</li>
-                    <li class="text_ellipsis">xxx人正在参与</li>
+                    <li class="text_ellipsis">{{week_contest_num|competiteShow}}</li>
+                    <li class="text_ellipsis">{{challenge_num|competiteShow}}</li>
+                    <li class="text_ellipsis">{{brain_test_num|competiteShow}}</li>
+                    <li class="text_ellipsis">{{contest_num|competiteShow}}</li>
                 </ul>
             </div>
         </div>
@@ -59,56 +59,67 @@
         <div class="tab-ph" v-show="activeTab=='cs'">
             <div class="qs-for-week relative">
                 <img src="./imgs/bg-questions.png" alt="">
-                <img class="m-work" src="./imgs/icon-mywork.png" alt="">
+                <img class="m-work" src="./imgs/icon-mywork.png" alt="" @click="goMywork">
                 <div class="qs-box">
-                    <h3 class="fontsize36">表情题（一）</h3>
+                    <h3 class="fontsize36">{{question_list.length>0?(question_list[realIndex].title||''):''}}</h3>
                     <p class="fontsize24">将下列表情组装成一个小故事</p>
                     <div class="swiper-father">
                         <div class="swiper-container" id="weeksQs">
                             <div class="swiper-wrapper">
-                                <div class="swiper-slide">slider1</div>
-                                <div class="swiper-slide">slider2</div>
-                                <div class="swiper-slide">slider3</div>
+                                <div class="swiper-slide" v-for="(item, index) in question_list" :key="index"><img
+                                        :src="item.img_url" alt=""></div>
+                                <!-- <div class="swiper-slide">slider2</div>
+                                <div class="swiper-slide">slider3</div> -->
                             </div>
                         </div>
                         <div class="swiper-button-prev"></div>
                         <div class="swiper-button-next"></div>
                     </div>
                     <div class="btn-handin"></div>
-                    <a class="fontsize24" href="./works.html">热门作品合集 <i class="fontsize18">》</i></a>
+                    <a class="fontsize24">热门作品合集 <i class="fontsize18">》</i></a>
                 </div>
                 <a class="qs-btn fontsize24 color_999" href="./subject.html">点击查看更多往周赛题</a>
             </div>
             <div class="m-ribbon relative">
                 <img src="./imgs/bg-king.png" alt="">
                 <img class="lightning" src="./imgs/icon-light.png" alt="">
-                <img class="k-num" src="./imgs/img-10.png" alt="">
+                <!-- <img class="k-num" :src="'./imgs/img-'+dzwzShow+'.png'" alt=""> -->
+                <div class="k-num" v-html="scalImgByNum(dzwzShow,'0.9rem','y','')"></div>
                 <div class="rb-box rb1">
                     <div class="rb-line-box blue">
-                        <div class="rb-line" :style="{'width': '80%','background-image':'url(./imgs/img-10.png)'}">
+                        <div class="rb-line"
+                            :style="{'width': dzsShow/2*100+'%','background-image':'url(./imgs/img-'+dzsShow+'.png)'}">
                         </div>
                     </div>
-                    <img class="num" :src="'./imgs/img-'+10+'.png'"></img>
-                    <p class="fontsize16">当前还差1条即可自动合成</p>
+                    <img class="num" :src="'./imgs/img-2.png'" style="margin-right: 0.7rem"></img>
+                    <p class="fontsize16">当前还差{{2-dzsShow}}条即可自动合成</p>
                 </div>
                 <div class="rb-box rb2">
                     <div class="rb-line-box yellow">
-                        <div class="rb-line" :style="{'width': '80%','background-image':'url(./imgs/img-10.png)'}">
+                        <div class="rb-line"
+                            :style="{'width': aiyoShow/5*100+'%','background-image':'url(./imgs/img-'+aiyoShow+'.png)'}">
                         </div>
                     </div>
-                    <img class="num" :src="'./imgs/img-'+10+'.png'"></img>
-                    <p class="fontsize16">当前还差1条即可自动合成</p>
+                    <img class="num" :src="'./imgs/img-5.png'" style="margin-right: 0.7rem"></img>
+                    <p class="fontsize16">当前还差{{5-aiyoShow}}条即可自动合成</p>
                 </div>
                 <div class="rb-box rb3">
                     <div class="rb-line-box pink">
-                        <div class="rb-line" :style="{'width': '80%','background-image':'url(./imgs/img-10.png)'}">
+                        <div class="rb-line"
+                            :style="{'width': heartenShow/10*100+'%','background-image':'url(./imgs/img-'+heartenShow+'.png)'}">
                         </div>
                     </div>
-                    <img class="num" :src="'./imgs/img-'+10+'.png'"></img>
-                    <p class="fontsize16">当前还差4个鼓励值即可自动合成</p>
+                    <img class="num" :src="'./imgs/img-10.png'"></img>
+                    <p class="fontsize16">当前还差{{10-heartenShow}}个鼓励值即可自动合成</p>
                 </div>
                 <div class="rb-href fontsize24">
-                    <a href="./riblist.html">集满10个鼓励值，合成一条“哎哟不错哦”缎带</a>
+                    <!-- <a @click="goRiblist">集满10个鼓励值，合成一条“哎哟不错哦”缎带</a> -->
+                    <!-- 跑马灯信息区域 -->
+                    <div class="message_container" v-if="helpList.length > 0" @click="goRiblist">
+                        <div class="message_content">
+                            <p class="msg_row" v-for="item in helpList">{{item.time}} {{item.des}}</p>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="m-prop-test relative">
@@ -116,9 +127,17 @@
                 <div class="m-prop">
                     <i class="exp" onclick="showModal('#propExp')"></i>
                     <i class="m-tips"></i>
-                    <div class="mp-scroll-box">
+                    <div class="mp-scroll-box" v-show="prop_list.length>0">
                         <ul class="mp-ul">
-                            <li>
+                            <template>
+                                <li v-for="(item, index) in prop_list" :key="index">
+                                    <img :src="item.status==0?item.img_url:item.gray_img_url" alt="">
+                                    <p class="fontsize16">{{item.src}}</p>
+                                    <a v-show="item.status!=0" class="fontsize16">{{item.des}}</a>
+                                    <i v-if="item.status==0" @click="useProp(item.id,index)"></i>
+                                </li>
+                            </template>
+                            <!-- <li>
                                 <img src="./imgs/img-card1.png" alt="">
                                 <p class="fontsize16">2020/03/01周榜第三名</p>
                                 <a class="fontsize16">已点化为<br>“段子王者”缎带</a>
@@ -137,20 +156,23 @@
                                 <img src="./imgs/img-card1.png" alt="">
                                 <p class="fontsize16">2020/03/01周榜第三名</p>
                                 <a></a>
-                            </li>
+                            </li> -->
                         </ul>
                     </div>
-                    <!-- <div class="mp-scroll-box flex_row">
+                    <div class="mp-scroll-box flex_row" v-show="prop_list.length<=0">
                         <div class="no-content fontsize24">
                             <p class="nc-p1">你还没有获得任何道具呢</p>
                             <p class="nc-p2">参与周榜冲榜、邀请好友注册、参与踢馆赛、 <br>玩脑洞测试，都有机会获得冲刺卡哦！</p>
                         </div>
-                    </div> -->
+                    </div>
                     <div class="mp-btn"></div>
                     <p class="mp-p fontsize18">邀请好友注册，可获得友情冲刺卡一张</p>
-                    <p class="mp-a fontsize22"><a href="./support.html">应援记录</a></p>
+                    <p class="mp-a fontsize22"><a @click="goHelplist">应援记录</a></p>
                 </div>
-                <div class="m-test"></div>
+                <div class="m-test">
+                    <img src="./imgs/img-test.png" alt="">
+                    <img src="./imgs/btn-test.png" style="margin-top: 0.833rem;" alt="">
+                </div>
             </div>
 
 
@@ -189,63 +211,57 @@
             <div class="king-row">
                 <div class="king-row-left">
                     <div class="head-container">
-                        <img src="imgs/img-card1.png" class="king-head" />
+                        <img :src="rankInfo.head" class="king-head" />
                         <img src="imgs/king-head.png" class="king-head-top" />
                     </div>
-                    <p class="king-name text_ellipsis">昵称昵称昵称昵称</p>
+                    <p class="king-name text_ellipsis">{{rankInfo.name}}</p>
                 </div>
                 <div>
                     <img src="imgs/icon-rib.png" class="king-nums-img" />
-                    <span class="king-nums">x10</span>
+                    <span class="king-nums">X {{rankInfo.score||0}}</span>
                     <img src="imgs/icon-to-rank.png" class="icon-to-rank">
                 </div>
 
             </div>
             <!-- 地图 -->
-            <div class="map-container">
+            <div class="map-container" v-if="stageList&&stageList.length==8">
                 <!-- 第一周周赛 -->
                 <div class="week week1">
                     <img src="imgs/icon-week1-active.png" class="week-flag" />
-                    <div class="week-match week-ing">
+                    <div class="week-match" :class="'week-'+stageList[0].status">
                         <div class="week-text">
-                            <p>2020.03.30-</p>
-                            <p>2020.04.03</p>
-                            <p>第一周</p>
-                            <p>排行榜</p>
-                            <p>（已结算）</p>
+                            <p>{{stageList[0].time}}</p>
+                            <p>{{stageList[0].name}}</p>
+                            <p>（{{stageList[0].status|statusShow}}）</p>
                         </div>
                     </div>
                 </div>
                 <!-- 第一周踢馆 -->
-                <div class="week-tiguan week-tiguan1 week-tiguan-no-begin">
+                <div class="week-tiguan week-tiguan1" :class="'week-tiguan-'+stageList[1].status">
                     <div class="week-text">
-                        <p>2020.03.30-</p>
-                        <p>2020.04.03</p>
-                        <p>踢馆赛</p>
-                        <p>（已结算）</p>
+                        <p>{{stageList[1].time}}</p>
+                        <p>{{stageList[1].name}}</p>
+                        <p>（{{stageList[1].status|statusShow}}）</p>
                     </div>
                 </div>
 
                 <!-- 第二周周赛 -->
                 <div class="week week2">
                     <img src="imgs/icon-week2-active.png" class="week-flag" />
-                    <div class="week-match week-ing">
+                    <div class="week-match" :class="'week-'+stageList[2].status">
                         <div class="week-text">
-                            <p>2020.03.30-</p>
-                            <p>2020.04.03</p>
-                            <p>第一周</p>
-                            <p>排行榜</p>
-                            <p>（已结算）</p>
+                            <p>{{stageList[2].time}}</p>
+                            <p>{{stageList[2].name}}</p>
+                            <p>（{{stageList[2].status|statusShow}}）</p>
                         </div>
                     </div>
                 </div>
                 <!-- 第二周踢馆 -->
-                <div class="week-tiguan week-tiguan2 week-tiguan-no-begin">
+                <div class="week-tiguan week-tiguan2" :class="'week-tiguan-'+stageList[3].status">
                     <div class="week-text">
-                        <p>2020.03.30-</p>
-                        <p>2020.04.03</p>
-                        <p>踢馆赛</p>
-                        <p>（已结算）</p>
+                        <p>{{stageList[3].time}}</p>
+                        <p>{{stageList[3].name}}</p>
+                        <p>（{{stageList[3].status|statusShow}}）</p>
                     </div>
                 </div>
 
@@ -253,23 +269,20 @@
                 <!-- 第三周周赛 -->
                 <div class="week week3">
                     <img src="imgs/icon-week3-active.png" class="week-flag" />
-                    <div class="week-match week-ing">
+                    <div class="week-match" :class="'week-'+stageList[4].status">
                         <div class="week-text">
-                            <p>2020.03.30-</p>
-                            <p>2020.04.03</p>
-                            <p>第一周</p>
-                            <p>排行榜</p>
-                            <p>（已结算）</p>
+                            <p>{{stageList[4].time}}</p>
+                            <p>{{stageList[4].name}}</p>
+                            <p>（{{stageList[4].status|statusShow}}）</p>
                         </div>
                     </div>
                 </div>
                 <!-- 第三周踢馆 -->
-                <div class="week-tiguan week-tiguan3 week-tiguan-no-begin">
+                <div class="week-tiguan week-tiguan3" :class="'week-tiguan-'+stageList[5].status">
                     <div class="week-text">
-                        <p>2020.03.30-</p>
-                        <p>2020.04.03</p>
-                        <p>踢馆赛</p>
-                        <p>（已结算）</p>
+                        <p>{{stageList[5].time}}</p>
+                        <p>{{stageList[5].name}}</p>
+                        <p>（{{stageList[5].status|statusShow}}）</p>
                     </div>
                 </div>
 
@@ -277,23 +290,20 @@
                 <!-- 第四周周赛 -->
                 <div class="week week4">
                     <img src="imgs/icon-week4-active.png" class="week-flag" />
-                    <div class="week-match week-ing">
+                    <div class="week-match" :class="'week-'+stageList[6].status">
                         <div class="week-text">
-                            <p>2020.03.30-</p>
-                            <p>2020.04.03</p>
-                            <p>第一周</p>
-                            <p>排行榜</p>
-                            <p>（已结算）</p>
+                            <p>{{stageList[6].time}}</p>
+                            <p>{{stageList[6].name}}</p>
+                            <p>（{{stageList[6].status|statusShow}}）</p>
                         </div>
                     </div>
                 </div>
                 <!-- 第四周踢馆 -->
-                <div class="week-tiguan week-tiguan4 week-tiguan-no-begin">
+                <div class="week-tiguan week-tiguan4" :class="'week-tiguan-'+stageList[7].status">
                     <div class="week-text">
-                        <p>2020.03.30-</p>
-                        <p>2020.04.03</p>
-                        <p>踢馆赛</p>
-                        <p>（已结算）</p>
+                        <p>{{stageList[7].time}}</p>
+                        <p>{{stageList[7].name}}</p>
+                        <p>（{{stageList[7].status|statusShow}}）</p>
                     </div>
                 </div>
 
@@ -308,11 +318,11 @@
                         <img src="imgs/bg-king-rank.png" class="rewards-bg" />
                     </div>
                     <div>
-                        <p class="p-text2">总榜第一名</p>
+                        <p class="p-text2">总榜二至四名</p>
                         <img src="imgs/bg-king-rank.png" class="rewards-bg" />
                     </div>
                     <div>
-                        <p class="p-text2">总榜第一名</p>
+                        <p class="p-text2">总榜五至十名</p>
                         <img src="imgs/bg-king-rank.png" class="rewards-bg" />
                     </div>
                 </div>
@@ -352,6 +362,7 @@
     <script src="../../../res/js/vue.min.js"></script>
     <script src="../../../res/js/base64.js"></script>
     <script src="../../../res/js/common.js"></script>
+    <script src="./asset/common.js"></script>
     <script src="main.js"></script>
 </body>
 
