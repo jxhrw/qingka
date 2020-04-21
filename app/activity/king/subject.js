@@ -21,8 +21,6 @@ var pageData = new Vue({
                 console.log(res);
                 _this.list = res.list || [];
 
-                _this.list = [...res.list, ...res.list]
-
                 _this.$nextTick(function () {
                     for (var i = 0; i < _this.list.length; i++) {
                         new Swiper('#weeksQs' + i, {

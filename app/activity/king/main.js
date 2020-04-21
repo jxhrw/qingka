@@ -136,8 +136,8 @@ var pageData = new Vue({
             return calImgByNum(num, size, color, havex);
         },
         goMywork: function () {
-            _alert('您还没有发布参赛作品，<br>快去参与吧');
-            // location.href = './works.html?sid=' + get_url_para('sid');
+            // _alert('您还没有发布参赛作品，<br>快去参与吧');
+            location.href = './works.html?sid=' + get_url_para('sid');
         },
         goRiblist: function () {
             location.href = './riblist.html?sid=' + get_url_para('sid');

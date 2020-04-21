@@ -24,7 +24,7 @@
 
     <div id="page" class="sub-list">
         <div class="sub-week relative" v-for="(item, index) in list" :key="index">
-            <p class="date fontsize24">2020年4/20-4/26</p>
+            <p class="date fontsize24">{{item.title}}</p>
             <img src="./imgs/bg-sub.png" alt="">
             <div class="qs-box">
                 <h3 class="fontsize36">
@@ -34,7 +34,7 @@
                     <div class="swiper-container" :id="'weeksQs'+index">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide" v-for="(item2, index2) in item.question_list" :key="index"><img
-                                    :src="item.img_url" alt="">{{index2}}</div>
+                                    :src="item2.img_url" alt=""></div>
                         </div>
                     </div>
                     <div class="swiper-button-prev" :class="'swiper-button-prev'+index"></div>
